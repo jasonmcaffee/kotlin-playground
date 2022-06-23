@@ -52,7 +52,7 @@ class MyRetailControllerTest(
     }
 
     @Test
-    fun happyPath(){
+    fun getProductByIdHappyPath(){
         val productId = 13860428L
         val currentPriceValue = 13.49
         val currencyCode = CurrencyCode.USD
@@ -72,7 +72,7 @@ class MyRetailControllerTest(
     }
 
     @Test
-    fun foundInRedSkyButNotInDatabase(){
+    fun getProductByIdFoundInRedSkyButNotInDatabase(){
         enqueueRedSkyResponseForBigLebowski()
         given()
             .contentType("application/json")
@@ -85,7 +85,7 @@ class MyRetailControllerTest(
     }
 
     @Test
-    fun foundInDatabaseButNotInRedSky(){
+    fun getProductByIdFoundInDatabaseButNotInRedSky(){
         val productId = 13860428L
         enqueueRedSkyResponseForNotFound()
         productPricingRepository.save(ProductPricing(productId, currentPrice = CurrentPrice(13.49, CurrencyCode.USD)))
@@ -98,6 +98,65 @@ class MyRetailControllerTest(
             .log().ifValidationFails(LogDetail.BODY)
             .`when`().get("http://localhost:$port/my-retail/products/$productId")
     }
+
+    @Test
+    fun updateProductPricingHappyPath(){
+        val productId = 13860428L
+        productPricingRepository.save(ProductPricing(productId, currentPrice = CurrentPrice(13.49, CurrencyCode.USD)))
+
+        val newPrice = 22.22
+        given()
+            .contentType("application/json")
+            .accept("application/json")
+            .body(createUpdateProductRequestBody(newPrice, CurrencyCode.USD, "wont change"))
+            .expect()
+            .statusCode(200)
+            .log().ifValidationFails(LogDetail.BODY)
+            .log().body()
+            .`when`().put("http://localhost:$port/my-retail/products/$productId")
+
+        enqueueRedSkyResponseForBigLebowski()
+        given()
+            .contentType("application/json")
+            .accept("application/json")
+            .expect()
+            .statusCode(200)
+            .body("id", equalTo(productId.toInt()))
+            .body("name", equalTo("The Big Lebowski (Blu-ray)"))
+            .body("current_price.value", equalTo(newPrice.toFloat()))
+            .body("current_price.currency_code", equalTo(CurrencyCode.USD.toString()))
+            .log().ifValidationFails(LogDetail.BODY)
+            .`when`().get("http://localhost:$port/my-retail/products/$productId")
+    }
+
+    @Test
+    fun updateProductPricingThatIsNotFound(){
+        given()
+            .contentType("application/json")
+            .accept("application/json")
+            .body(createUpdateProductRequestBody(22.33, CurrencyCode.USD, "wont change"))
+            .expect()
+            .statusCode(404)
+            .log().ifValidationFails(LogDetail.BODY)
+            .`when`().put("http://localhost:$port/my-retail/products/13860428")
+    }
+
+    @Test
+    fun updateProductPricingWithLessThanZeroValue(){
+        val productId = 13860428L
+        productPricingRepository.save(ProductPricing(productId, currentPrice = CurrentPrice(13.49, CurrencyCode.USD)))
+        given()
+            .contentType("application/json")
+            .accept("application/json")
+            .body(createUpdateProductRequestBody(-123.00, CurrencyCode.USD, "wont change"))
+            .expect()
+            .statusCode(400)
+            .body("'current_price.value'", equalTo("Price must not be less than 0"))
+            .log().ifValidationFails(LogDetail.BODY)
+            .`when`().put("http://localhost:$port/my-retail/products/$productId")
+    }
+
+
 
     fun enqueueRedSkyResponseForBigLebowski() = enqueueRedSkyResponse(bigLebowskiRedSkyResponse13860428)
 
@@ -114,6 +173,18 @@ class MyRetailControllerTest(
         mockRedSkyAPI.enqueue(MockResponse()
             .setBody("{\"errors\":[{\"message\":\"No product found with tcin 1\"}]}")
             .setResponseCode(404))
+    }
+
+    fun createUpdateProductRequestBody(value: Double, currencyCode: CurrencyCode, productName: String): String{
+        return """
+           {
+                 "name": "$productName",
+                 "current_price": {
+                    "value": $value,
+                    "currency_code": "$currencyCode"
+                 }
+           }
+        """
     }
 
 }

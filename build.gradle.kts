@@ -31,6 +31,7 @@ dependencies {
 	implementation ("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.0")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
 	testImplementation("io.rest-assured", "rest-assured", restAssuredVersion)
 	testImplementation("io.rest-assured", "kotlin-extensions", restAssuredVersion)
@@ -42,7 +43,7 @@ dependencies {
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict")
+		freeCompilerArgs = listOf("-Xjsr305=strict", "-Xemit-jvm-type-annotations")
 		jvmTarget = "13"
 	}
 }

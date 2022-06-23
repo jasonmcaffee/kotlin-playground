@@ -1,19 +1,14 @@
 package com.jason.kotlinplayground.services
 
+import com.jason.kotlinplayground.mappers.ProductRequestMapper
 import com.jason.kotlinplayground.mappers.ProductResponseMapper
-import com.jason.kotlinplayground.models.CurrencyCode
-import com.jason.kotlinplayground.models.CurrentPrice
-import com.jason.kotlinplayground.models.ProductPricing
 import com.jason.kotlinplayground.models.exceptions.ProductPricingNotFoundException
+import com.jason.kotlinplayground.models.request.UpdateProductRequest
 import com.jason.kotlinplayground.models.response.ProductResponse
 import com.jason.kotlinplayground.redskyClient.RedSkyClient
-import com.jason.kotlinplayground.redskyClient.models.ProductInfoResponse
 import com.jason.kotlinplayground.repositories.ProductPricingRepository
 import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.supervisorScope
-import org.bson.types.ObjectId
 import org.springframework.dao.EmptyResultDataAccessException
 import org.springframework.stereotype.Service
 
@@ -40,5 +35,23 @@ class MyRetailService(
         }
         val productInfo = productInfoPromise.await()
         return@supervisorScope ProductResponseMapper.fromProductInfoAndProductPricing(productInfo, productPricing)
+    }
+
+    /**
+     * Update product pricing in db.
+     */
+    fun updateProductPrice(id: Long, updateProductRequest: UpdateProductRequest){
+        //ensure the document already exists.
+        try {
+            productPricingRepository.getProductPricingById(id)
+        } catch(e: Exception){
+            when(e){
+                is EmptyResultDataAccessException -> throw ProductPricingNotFoundException("no pricing found for product id: $id")
+                else -> throw e
+            }
+        }
+
+        val currentPrice = ProductRequestMapper.toProductPricing(id, updateProductRequest)
+        productPricingRepository.save(currentPrice)
     }
 }
