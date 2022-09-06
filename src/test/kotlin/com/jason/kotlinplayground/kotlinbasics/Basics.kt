@@ -154,7 +154,7 @@ class Basics {
         assert(`Fire and Ice by Robert Frost` === uglierFormatting)
     }
 
-    @Test fun `for loop`(){
+    @Test fun `loops`(){
         val nobleGases = listOf("Helium", "Argon", "Krypton", "Xenon", "Neon", "Radon", "Oganesson",)
         for(gas in nobleGases){
             assert(nobleGases.contains(gas))
@@ -162,6 +162,26 @@ class Basics {
         nobleGases.forEach {
             assert(nobleGases.contains(it))
         }
+
+        for(i in 1..3){
+            println(i) //prints 1, 2, 3
+        }
+        //until and downTo are functions, of a feature called 'infix call'
+        for (i in 1 until 3){
+            println(i) //prints 1, 2
+        }
+        for(i in 3 downTo 1){
+            println(i)//prints 3, 2, 1
+        }
+
+        var i = 0
+        while(i < 2){
+            println(i++) //prints 0, 1
+        }
+        i = 0
+        do{
+            println(i++) //prints 0, 1
+        }while(i < 2)
     }
 
 }
