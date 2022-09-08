@@ -200,4 +200,28 @@ class Basics {
         assert(person.address == "set to: is mutable + get")
     }
 
+    interface Meditator{
+        fun obtainEnlightenment(): Unit
+        val robeColor: String
+        //default implementation
+        fun getReasonForMeditating() = "Nirvana"
+    }
+    @Test fun `interfaces`(){
+        class SinglePointMeditator(override val robeColor: String) : Meditator {
+            override fun obtainEnlightenment() {
+                TODO("Not yet implemented")
+            }
+        }
+
+        val singlePointMeditator = SinglePointMeditator("orange")
+        val errorCount = try{
+            singlePointMeditator.obtainEnlightenment()
+        }catch(e: NotImplementedError){
+            1
+        }
+        assert(errorCount == 1)
+
+        assert(singlePointMeditator.getReasonForMeditating() == "Nirvana")
+    }
+
 }
