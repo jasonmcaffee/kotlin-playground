@@ -184,4 +184,20 @@ class Basics {
         }while(i < 2)
     }
 
+    @Test fun `classes`(){
+        class Person(val name: String, address: String? = null){ //primary constructor with val property, which autogens getters/setters
+            //in order for address to have getters/setters, it must be defined here.
+            var address: String? = address
+                set(value){
+                    field = "set to: $value"
+                }
+                get() = field + " + get"
+        }
+        val person = Person("Jason")
+        assert(person.name === "Jason")
+        // person.name = "is immutable so won't work"
+        person.address = "is mutable"
+        assert(person.address == "set to: is mutable + get")
+    }
+
 }

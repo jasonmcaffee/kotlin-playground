@@ -1,9 +1,9 @@
-package com.jason.kotlinplayground.controllers
+package com.jason.kotlinplayground.redsky.controllers
 
-import com.jason.kotlinplayground.models.CurrencyCode
-import com.jason.kotlinplayground.models.CurrentPrice
-import com.jason.kotlinplayground.models.ProductPricing
-import com.jason.kotlinplayground.repositories.ProductPricingRepository
+import com.jason.kotlinplayground.redsky.models.CurrencyCode
+import com.jason.kotlinplayground.redsky.models.CurrentPrice
+import com.jason.kotlinplayground.redsky.models.ProductPricing
+import com.jason.kotlinplayground.redsky.repositories.ProductPricingRepository
 import io.restassured.RestAssured.given
 import io.restassured.filter.log.LogDetail
 import okhttp3.mockwebserver.MockResponse
