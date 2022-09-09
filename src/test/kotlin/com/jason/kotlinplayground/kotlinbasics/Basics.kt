@@ -224,4 +224,26 @@ class Basics {
         assert(singlePointMeditator.getReasonForMeditating() == "Nirvana")
     }
 
+    @Test fun `abstract classes and visibility modifiers`(){
+        abstract class FundamentalForce(val rangeInMeters: BigDecimal){
+            fun getParticlesWithinRange(allParticles: List<String>) = allParticles.filter { isParticleWithinRange(it) }
+            private fun isParticleWithinRange(particle: String) = true
+            protected fun doPhysics() = "beep boop beep"
+        }
+
+        var initCallCount = 0
+        class WeakNuclearForce(rangeInMeters: BigDecimal): FundamentalForce(rangeInMeters){
+            init{
+                this.doPhysics() //we can access protected functions
+                // this.isParticleWithinRange() // we _cannot_ access private functions
+                ++initCallCount
+            }
+        }
+
+        val weakNuclearForce = WeakNuclearForce(BigDecimal("10E-17"))
+        assert(initCallCount == 1)
+        assert(weakNuclearForce.rangeInMeters == BigDecimal("10E-17"))
+        assert(weakNuclearForce.getParticlesWithinRange(listOf("W", "Z")) == listOf("W", "Z"))
+    }
+
 }

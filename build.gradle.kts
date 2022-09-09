@@ -6,6 +6,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
+	id("org.flywaydb.flyway") version "9.3.0"
 }
 
 group = "com.jason"
@@ -50,4 +51,13 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+//db migration
+flyway {
+	url = ""
+	user = ""
+	password = ""
+	schemas = arrayOf()
+	placeholders = mapOf()
 }
