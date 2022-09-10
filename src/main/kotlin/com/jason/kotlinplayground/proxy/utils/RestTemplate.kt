@@ -1,5 +1,6 @@
 package com.jason.kotlinplayground.proxy.utils
 
+import kotlinx.coroutines.*
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -18,16 +19,36 @@ fun copyHeadersFromRequest(request: HttpServletRequest) = HttpHeaders().also{ he
     headers.remove(HttpHeaders.ACCEPT_ENCODING)
 }
 
-fun fetch(url: String, method: HttpMethod, headers: HttpHeaders, body: String? = null): ResponseEntity<String> {
-    val uri = URI(url)
-    val httpEntity = HttpEntity(body, headers)
-    val factory = BufferingClientHttpRequestFactory(SimpleClientHttpRequestFactory())
-    val restTemplate = RestTemplate(factory)
-    return try {
-        restTemplate.exchange(uri, method, httpEntity, String::class.java)
-    }catch(e: HttpStatusCodeException){
-        ResponseEntity.status(e.rawStatusCode)
-            .headers(e.responseHeaders)
-            .body(e.responseBodyAsString)
+/**
+ * https://developer.android.com/kotlin/coroutines/coroutines-adv
+ * Dispatchers.IO - This dispatcher is optimized to perform disk or network I/O outside of the main thread. Examples include using the Room component, reading from or writing to files, and running any network operations.
+ */
+suspend fun fetch(url: String, method: HttpMethod, headers: HttpHeaders, body: String? = null): Deferred<ResponseEntity<String>> = withContext(Dispatchers.IO) {
+    async {
+        val uri = URI(url)
+        val httpEntity = HttpEntity(body, headers)
+        val factory = BufferingClientHttpRequestFactory(SimpleClientHttpRequestFactory())
+        val restTemplate = RestTemplate(factory)
+        try {
+            restTemplate.exchange(uri, method, httpEntity, String::class.java)
+        }catch(e: HttpStatusCodeException){
+            ResponseEntity.status(e.rawStatusCode)
+                .headers(e.responseHeaders)
+                .body(e.responseBodyAsString)
+        }
     }
+}
+
+suspend fun fetch(url: String, method: HttpMethod, headers: Map<String, String>, body: String? = null): Deferred<ResponseEntity<String>> =
+    fetch(url, method, createHeadersFromMap(headers), body)
+fun createHeadersFromMap(headers: Map<String, String>): HttpHeaders{
+    val httpHeaders = HttpHeaders()
+    headers.entries.forEach{ (key, value) ->
+        httpHeaders.set(key, value)
+    }
+    return httpHeaders
+}
+
+suspend fun <T>await(promise: Deferred<T>): T{
+    return promise.await()
 }

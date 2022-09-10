@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse
 @RestController
 class ProxyController(val proxyService: ProxyService) {
     @RequestMapping("/proxy")
-    fun proxyRequest(
+    suspend fun proxyRequest(
         @RequestBody(required = false) body: String?,
         @RequestParam urlToProxyTo: String,
         method: HttpMethod,
