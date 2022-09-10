@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse
 @Service
 class ProxyService(private val cachedResponseRepository: CachedResponseRepository) {
     fun proxyRequest(urlToProxyTo: String, body: String?, method: HttpMethod, request: HttpServletRequest, response: HttpServletResponse): ResponseEntity<String>{
-        val cachedResponses = cachedResponseRepository.findCachedResponses()
+//        val cachedResponses = cachedResponseRepository.findCachedResponses()
         val uri = URI(urlToProxyTo)
         val headers = createHeadersFromRequest(request)
         val httpEntity = HttpEntity(body, headers)
