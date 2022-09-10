@@ -38,6 +38,9 @@ dependencies {
 	testImplementation("com.squareup.okhttp3:okhttp:4.9.1")
 	testImplementation("com.squareup.okhttp3:mockwebserver:4.9.1")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	implementation("org.postgresql:postgresql")
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+//	runtimeOnly("com.h2database:h2")
 }
 
 tasks.withType<KotlinCompile> {

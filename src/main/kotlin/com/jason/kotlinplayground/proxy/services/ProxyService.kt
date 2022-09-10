@@ -1,5 +1,6 @@
 package com.jason.kotlinplayground.proxy.services
 
+import com.jason.kotlinplayground.proxy.repositories.CachedResponseRepository
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -14,8 +15,9 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 @Service
-class ProxyService {
+class ProxyService(private val cachedResponseRepository: CachedResponseRepository) {
     fun proxyRequest(urlToProxyTo: String, body: String?, method: HttpMethod, request: HttpServletRequest, response: HttpServletResponse): ResponseEntity<String>{
+        val cachedResponses = cachedResponseRepository.findCachedResponses()
         val uri = URI(urlToProxyTo)
         val headers = createHeadersFromRequest(request)
         val httpEntity = HttpEntity(body, headers)
