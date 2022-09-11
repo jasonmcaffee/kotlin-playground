@@ -7,5 +7,6 @@ create table if not exists cached_response(
     url varchar not null,
     response_body text not null,
     response_headers jsonb,
-    response_content_type varchar not null
+    request_body text,
+    request_headers jsonb
 );

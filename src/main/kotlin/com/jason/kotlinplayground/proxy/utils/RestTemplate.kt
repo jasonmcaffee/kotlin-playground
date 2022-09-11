@@ -41,12 +41,21 @@ suspend fun fetch(url: String, method: HttpMethod, headers: HttpHeaders, body: S
 
 suspend fun fetch(url: String, method: HttpMethod, headers: Map<String, String>, body: String? = null): Deferred<ResponseEntity<String>> =
     fetch(url, method, createHeadersFromMap(headers), body)
+
 fun createHeadersFromMap(headers: Map<String, String>): HttpHeaders{
     val httpHeaders = HttpHeaders()
     headers.entries.forEach{ (key, value) ->
         httpHeaders.set(key, value)
     }
     return httpHeaders
+}
+
+fun createMapFromRequestHeaders(request: HttpServletRequest): Map<String, String>{
+    val headers = mutableMapOf<String, String>()
+    request.headerNames.toList().forEach{ headerName ->
+        headers[headerName] = request.getHeader(headerName)
+    }
+    return headers
 }
 
 //suspend fun <T>await(promise: Deferred<T>): T{
