@@ -9,16 +9,6 @@ import org.springframework.stereotype.Repository
 //https://kotlinlang.org/docs/jvm-spring-boot-restful.html#add-database-support
 @Repository
 interface CachedResponseRepository: CrudRepository<CachedResponse, Long> {
-    @Query("select * from cached_response")
-    fun findCachedResponses(): List<CachedResponse>
-
-    @Query("""
-        select * from cached_response cr 
-        where cr.url = :url 
-        and (cr.request_body = :request_body or cr.request_body is null)
-    """)
-    fun findCachedResponsesBy(@Param("url") url: String, @Param("request_body") requestBody: String?) : List<CachedResponse>
-
     @Query("""
         select * from cached_response cr 
         where cr.url = :url 
