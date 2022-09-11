@@ -49,6 +49,6 @@ fun createHeadersFromMap(headers: Map<String, String>): HttpHeaders{
     return httpHeaders
 }
 
-suspend fun <T>await(promise: Deferred<T>): T{
-    return promise.await()
-}
+//suspend fun <T>await(promise: Deferred<T>): T{
+//    return promise.await()
+//}
