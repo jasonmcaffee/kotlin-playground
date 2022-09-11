@@ -3,6 +3,7 @@ package com.jason.kotlinplayground.proxy.services
 import com.jason.kotlinplayground.proxy.models.CachedResponse
 import com.jason.kotlinplayground.proxy.repositories.CachedResponseRepository
 import com.jason.kotlinplayground.proxy.utils.*
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.springframework.http.HttpMethod
@@ -11,22 +12,15 @@ import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
+import kotlin.coroutines.CoroutineContext
 
 @Service
 class ProxyService(private val cachedResponseRepository: CachedResponseRepository) {
     suspend fun proxyRequest(urlToProxyTo: String, body: String?, method: HttpMethod, request: HttpServletRequest, response: HttpServletResponse): ResponseEntity<String>{
 
-        val cachedResponses = withContext(Dispatchers.IO) {
-            cachedResponseRepository.findCachedResponsesBy(urlToProxyTo, body)
-        }
-        println(cachedResponses)
+        val dbCachedResponse = withContext(Dispatchers.IO) { cachedResponseRepository.findCachedResponseBy(urlToProxyTo, body) }
+        if(dbCachedResponse != null) return createResponseEntityFromCachedResponse(dbCachedResponse)
 
-        val dbCachedResult = cachedResponses.firstOrNull()
-
-        if(dbCachedResult != null){
-            val result = createResponseEntityFromCachedResponse(dbCachedResult)
-            return result
-        }
         val result = fetch(urlToProxyTo, method, copyHeadersFromRequest(request), body).await()
 
         val cachedResponse = createCachedResponse(urlToProxyTo, request, body, result)
@@ -50,3 +44,6 @@ fun createResponseEntityFromCachedResponse(cachedResponse: CachedResponse): Resp
         .body(cachedResponse.responseBody)
 }
 
+suspend fun <T> io(
+    block: suspend CoroutineScope.() -> T
+) = withContext(Dispatchers.IO, block)
