@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "c737ae11-fcaa-45da-9fbc-449b996b71ab",
+		"name": "mem proxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "314536"
+	},
+	"item": [
+		{
+			"name": "Proxy Url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/proxy?urlToProxyTo=https://api.github.com/users/hadley/orgs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "urlToProxyTo",
+							"value": "https://api.github.com/users/hadley/orgs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editor - GetCachedResponsesForUrl",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Google Direct",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

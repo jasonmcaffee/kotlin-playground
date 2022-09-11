@@ -18,4 +18,10 @@ interface CachedResponseRepository: CrudRepository<CachedResponse, Long> {
         limit 1
     """)
     fun findCachedResponseBy(@Param("request_method") requestMethod: String, @Param("url") url: String, @Param("request_body") requestBody: String?) : CachedResponse?
+
+    @Query("""
+        select * from cached_response cr
+        where cr.url = :url
+    """)
+    fun findCachedResponseBy(@Param("url") url: String): List<CachedResponse>
 }
