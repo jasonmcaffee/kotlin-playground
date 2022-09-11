@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse
 class ProxyService(private val cachedResponseRepository: CachedResponseRepository) {
     suspend fun proxyRequest(urlToProxyTo: String, body: String?, method: HttpMethod, request: HttpServletRequest, response: HttpServletResponse): ResponseEntity<String>{
         //first check the db to see if we've already stored a response for the url and requestBody
-        val dbCachedResponse = io { cachedResponseRepository.findCachedResponseBy(urlToProxyTo, body) }
+        val dbCachedResponse = io { cachedResponseRepository.findCachedResponseBy(urlToProxyTo, body) } //TODO: include request method
         if(dbCachedResponse != null) return createResponseEntityFromCachedResponse(dbCachedResponse)
 
         //otherwise make the request and save it to the db.
