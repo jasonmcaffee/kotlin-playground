@@ -10,6 +10,7 @@ data class CachedResponse(
     val responseStatusCode: Int,
     val responseBody: String?,
     val responseHeaders: PGobject?,
+    val requestMethod: String,
     val requestBody: String?,
     val requestHeaders: PGobject,
     @Id
