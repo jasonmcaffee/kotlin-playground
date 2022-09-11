@@ -7,6 +7,7 @@ import org.springframework.data.relational.core.mapping.Table
 @Table
 data class CachedResponse(
     val url: String,
+    val responseStatusCode: Int,
     val responseBody: String?,
     val responseHeaders: PGobject?,
     val requestBody: String?,
