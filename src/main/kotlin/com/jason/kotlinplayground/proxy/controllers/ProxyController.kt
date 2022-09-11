@@ -19,8 +19,6 @@ class ProxyController(val proxyService: ProxyService) {
         method: HttpMethod,
         request: HttpServletRequest,
         response: HttpServletResponse
-    ): ResponseEntity<String>{
-        println("domain is: $urlToProxyTo, method is: $method, body is: $body")
-        return proxyService.proxyRequest(urlToProxyTo, body, method, request, response)
-    }
+    ): ResponseEntity<String> =
+        proxyService.proxyRequest(urlToProxyTo, body, method, request, response)
 }
