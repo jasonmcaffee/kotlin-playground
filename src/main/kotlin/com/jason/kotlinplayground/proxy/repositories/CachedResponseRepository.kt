@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 
 //https://kotlinlang.org/docs/jvm-spring-boot-restful.html#add-database-support
 @Repository
-interface CachedResponseEntityRepository: CrudRepository<CachedResponseEntity, Long> {
+interface CachedResponseRepository: CrudRepository<CachedResponseEntity, Long> {
     @Query("""
         select * from cached_response cr 
         where cr.url = :url 

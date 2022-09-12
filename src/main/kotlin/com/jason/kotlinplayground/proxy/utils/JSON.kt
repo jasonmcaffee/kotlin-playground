@@ -42,3 +42,7 @@ fun <T> fromJson(json: String?): T? {
 fun httpHeadersFromPGobject(pGobject: PGobject?): HttpHeaders{
     return httpHeadersFromJson(pGobject?.value)
 }
+
+fun <T> fromPGobject(pgObject: PGobject?): T?{
+    return fromJson<T>(pgObject?.value)
+}

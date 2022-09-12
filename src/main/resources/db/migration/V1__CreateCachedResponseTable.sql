@@ -16,4 +16,4 @@ create table if not exists cached_response(
 -- create indexes for columns we plan on using in our search criteria.
 create index idx_cached_response_url on cached_response(url);
 create index idx_cached_response_request_method on cached_response(request_method);
-create index idx_cached_response_request_body on cached_response(request_body);
+-- create index idx_cached_response_request_body on cached_response(request_body);  -- probably not safe anyways in postgres, but h2 blows up with:  Feature not supported: "Index on column: ""REQUEST_BODY"" CHARACTER LARGE OBJECT"; SQL statement:

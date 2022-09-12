@@ -31,6 +31,7 @@ fun createCachedResponseEntity(urlToProxyTo: String, method: HttpMethod, request
 
 fun createResponseEntityFromCachedResponseEntity(cachedResponseEntity: CachedResponseEntity): ResponseEntity<String> {
     val headers = httpHeadersFromPGobject(cachedResponseEntity.responseHeaders)
+//    val headers = fromPGobject<HttpHeaders?>(cachedResponseEntity.responseHeaders) //class com.google.gson.internal.LinkedTreeMap cannot be cast to class org.springframework.http.HttpHeaders
     val httpStatus = HttpStatus.valueOf(cachedResponseEntity.responseStatusCode)
     return ResponseEntity.status(httpStatus)
         .headers(headers)
