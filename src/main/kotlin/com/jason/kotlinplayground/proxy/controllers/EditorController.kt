@@ -1,6 +1,6 @@
 package com.jason.kotlinplayground.proxy.controllers
 
-import com.jason.kotlinplayground.proxy.models.CachedResponse
+import com.jason.kotlinplayground.proxy.models.http.CachedResponse
 import com.jason.kotlinplayground.proxy.services.EditorService
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping

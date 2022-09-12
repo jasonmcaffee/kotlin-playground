@@ -26,9 +26,17 @@ fun httpHeadersFromJson(json: String?): HttpHeaders{
         return HttpHeaders()
     }
     val gson = Gson()
-    val httpHeadersType = object: TypeToken<HttpHeaders>(){}.type
     val httpHeaders: HttpHeaders = gson.fromJson(json, object : TypeToken<HttpHeaders>(){}.type)
     return httpHeaders
+}
+
+fun <T> fromJson(json: String?): T? {
+    if(json == null){
+        return null
+    }
+    val gson = Gson()
+    val t : T = gson.fromJson(json, object: TypeToken<T>(){}.type)
+    return t
 }
 
 fun httpHeadersFromPGobject(pGobject: PGobject?): HttpHeaders{

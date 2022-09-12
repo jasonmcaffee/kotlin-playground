@@ -1,11 +1,11 @@
-package com.jason.kotlinplayground.proxy.models
+package com.jason.kotlinplayground.proxy.models.db
 
 import org.postgresql.util.PGobject
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
-@Table
-data class CachedResponse(
+@Table(name = "cached_response")
+data class CachedResponseEntity(
     val url: String,
     val responseStatusCode: Int,
     val responseBody: String?,
