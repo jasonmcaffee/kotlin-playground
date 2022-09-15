@@ -246,4 +246,29 @@ class Basics {
         assert(weakNuclearForce.getParticlesWithinRange(listOf("W", "Z")) == listOf("W", "Z"))
     }
 
+    @Test fun `data classes`(){
+        data class BigO(val n: Int, val runtimeGrowth: (n: Int) -> Int){
+            fun characterize() = when (runtimeGrowth(n)){
+                1 -> "constant"
+                n -> "linear"
+                (n * n) -> "quadratic"
+                else -> "unknown"
+            }
+        }
+        //call suffix - when the last param is a function, it can go in {} instead of ()
+        val constantGrowth = BigO(10) { n -> 1 }
+        assert(constantGrowth.characterize() == "constant")
+
+        //data classes get hashcode() and equals() for free.
+        data class X(val y: String)
+        val x1 = X("howdy")
+        val x2 = X("howdy")
+        assert(x1.hashCode() == x2.hashCode())
+        assert(x1 == x2)
+
+        //copy function
+        val constantGrowth2 = constantGrowth.copy()
+        assert(constantGrowth == constantGrowth2)
+    }
+
 }
