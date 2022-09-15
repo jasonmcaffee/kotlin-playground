@@ -128,12 +128,12 @@ class OperatorOverloading {
         data class Person(val first: String, val last: String)
         val people = listOf(Person("Mathew", "Smith"), Person("Mark", "Cuban"), Person("Luke", "Skywalker"))
 
-        class From<TSourceItem> {
-            lateinit var source: List<TSourceItem>
+        class From {
+            lateinit var source: List<Any>
         }
 
-        class Select<TSourceItem> {
-            lateinit var from: From<TSourceItem>
+        class Select {
+            lateinit var from: From
             lateinit var propertyNames: List<String>
 
             fun execute(): List<Map<String, Any?>>{
@@ -143,7 +143,7 @@ class OperatorOverloading {
                 source.forEach{ item ->
                     val itemResult = mutableMapOf<String, Any?>()
                     propertyNames.forEach{ selectPropertyName ->
-                        item!!::class.memberProperties.forEach{
+                        item::class.memberProperties.forEach{
                             if(it.name == selectPropertyName){
                                 val value = it.getter.call(item)
                                 itemResult[selectPropertyName] = value
@@ -159,20 +159,20 @@ class OperatorOverloading {
             }
         }
 
-        fun <TSourceItem> select(vararg propertyNames: String): Select<TSourceItem>{
-            val s = Select<TSourceItem>()
+        fun select(vararg propertyNames: String): Select{
+            val s = Select()
             s.propertyNames = propertyNames.asList()
             return s
         }
 
-        infix fun <TSourceItem> Select<TSourceItem>.from(source: List<TSourceItem>): List<Map<String, Any?>>{
+        infix fun Select.from(source: List<Any>): List<Map<String, Any?>>{
             this.from = From()
             this.from.source = source
             return this.execute()
         }
 
         //run the select query
-        val results = select<Person>("first", "last") from people
+        val results = select("first", "last") from people
 
         //check the results
         assert(results.size == 3)
