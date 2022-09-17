@@ -40,7 +40,8 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	implementation("org.postgresql:postgresql")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-	testImplementation("com.h2database:h2")
+//	testImplementation("com.h2database:h2")
+	testImplementation("io.zonky.test:embedded-database-spring-test:2.1.2")
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.flywaydb:flyway-core") //run migrations on startup
 }

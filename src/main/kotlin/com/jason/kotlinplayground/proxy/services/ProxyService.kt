@@ -20,11 +20,7 @@ class ProxyService(private val cachedResponseRepository: CachedResponseRepositor
         //otherwise make the request and save it to the db.
         val result = fetch(urlToProxyTo, method, copyHeadersFromRequest(request), body).await()
         val cachedResponse = createCachedResponseEntity(urlToProxyTo, method, request, body, result)
-        try{
-            io { cachedResponseRepository.save(cachedResponse) }
-        }catch(e: Exception){
-            println("h2 db save is failing")
-        }
+        io { cachedResponseRepository.save(cachedResponse) }
 
         return result
     }

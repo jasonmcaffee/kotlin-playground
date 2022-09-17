@@ -2,6 +2,7 @@ package com.jason.kotlinplayground.proxy.controllers
 
 import com.jason.kotlinplayground.proxy.repositories.CachedResponseRepository
 import com.jason.kotlinplayground.proxy.utils.fetch
+import io.zonky.test.db.AutoConfigureEmbeddedDatabase
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
@@ -17,6 +18,7 @@ import org.springframework.http.HttpMethod
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@AutoConfigureEmbeddedDatabase
 class ProxyControllerTest(@LocalServerPort val port: Int, @Autowired val cachedResponseRepository: CachedResponseRepository) {
     val proxyHostBaseUrl = "http://localhost:$port"
     companion object{
