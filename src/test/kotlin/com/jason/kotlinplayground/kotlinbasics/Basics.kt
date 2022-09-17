@@ -23,10 +23,12 @@ class Basics {
         val bool = true
         val char = 'C'
         val long = 6_000L
+        val double = 42.0
         assert(str is String)
         assert(bool is Boolean)
         assert(char is Char)
         assert(long is Long)
+        assert(double is Double)
     }
 
     @Test fun `values and variables`(){
