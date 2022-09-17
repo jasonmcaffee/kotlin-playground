@@ -44,6 +44,8 @@ dependencies {
 	testImplementation("io.zonky.test:embedded-database-spring-test:2.1.2")
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.flywaydb:flyway-core") //run migrations on startup
+	implementation("javax.persistence:javax.persistence-api")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<KotlinCompile> {
