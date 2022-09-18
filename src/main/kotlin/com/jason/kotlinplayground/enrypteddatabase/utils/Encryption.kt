@@ -5,7 +5,7 @@ import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
 
-class Encryption(val masterKeyString: String = "mastersecret-key", val encryptedDataKey: String = "ph+MAMnuu8mf/jX32N2ZI5os1VjqievzdiY45WGfhPk=") {
+class Encryption(val masterKeyString: String, val encryptedDataKey: String) {
     private lateinit var dataKey: SecretKeySpec
     private lateinit var dataCipher: Cipher
     init {
@@ -21,7 +21,6 @@ class Encryption(val masterKeyString: String = "mastersecret-key", val encrypted
         dataCipher = Cipher.getInstance("AES")
     }
 
-
     fun encryptString(str: String?): String{
         dataCipher.init(Cipher.ENCRYPT_MODE, dataKey)
         val encryptedByteArray = dataCipher.doFinal(str?.toByteArray())
@@ -34,8 +33,6 @@ class Encryption(val masterKeyString: String = "mastersecret-key", val encrypted
         val decryptedByteArray = dataCipher.doFinal(decodedValue)
         return String(decryptedByteArray)
     }
-
-
 }
 
 //help create the keys.  using gpg doesn't yield the same result so not sure if command line is an option...
