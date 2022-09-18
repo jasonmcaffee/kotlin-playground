@@ -2,6 +2,8 @@ package com.jason.kotlinplayground.encrypteddatabase.repositories
 
 import com.jason.kotlinplayground.enrypteddatabase.models.EncryptedColumn
 import com.jason.kotlinplayground.enrypteddatabase.repositories.EncryptedColumnRepository
+import com.jason.kotlinplayground.enrypteddatabase.utils.Encryption
+import com.jason.kotlinplayground.enrypteddatabase.utils.encryptDataKey
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeAll
@@ -24,6 +26,11 @@ class EncryptedColumnRepositoryTest(
     @AfterEach
     fun teardown(){}
 
+    @Test fun `use this function to encrypt the data key with a new master any time you want to rotate keys`(){
+        val encryptedDataKey = encryptDataKey("mastersecret-key", "super-secret-key")
+        println(encryptedDataKey)
+    }
+
     @Test fun `stores and reads encrypted column values`(){
         val entryToSave = EncryptedColumn("super secret key to encrypt", "public info")
         encryptedColumnRepository.save(entryToSave)
@@ -38,4 +45,6 @@ class EncryptedColumnRepositoryTest(
         }
         assert(encryptedValue == "cnuD/b17Wc3mCtqhycOAKtyVQolDEnOcjjEcIbZg2/o=")
     }
+
+
 }

@@ -46,6 +46,7 @@ dependencies {
 	implementation("org.flywaydb:flyway-core") //run migrations on startup
 	implementation("javax.persistence:javax.persistence-api")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation(kotlin("script-runtime"))
 }
 
 tasks.withType<KotlinCompile> {
