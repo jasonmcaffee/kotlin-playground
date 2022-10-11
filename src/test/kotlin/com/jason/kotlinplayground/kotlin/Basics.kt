@@ -1,7 +1,6 @@
-package com.jason.kotlinplayground.kotlinbasics
+package com.jason.kotlinplayground.kotlin
 
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.*
 import java.math.BigDecimal
 
 class Basics {
@@ -273,4 +272,9 @@ class Basics {
         assert(constantGrowth == constantGrowth2)
     }
 
+    @Test fun `extension functions`(){
+        //String is the "method receiver".  "this" refers to String
+        fun String.mask() = "*".repeat(this.length)
+        assert("hello".mask() == "*****")
+    }
 }

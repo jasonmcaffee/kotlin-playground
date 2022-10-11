@@ -1,4 +1,4 @@
-package com.jason.kotlinplayground.kotlinbasics
+package com.jason.kotlinplayground.kotlin
 
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -6,7 +6,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import okhttp3.internal.wait
 import org.junit.jupiter.api.Test
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors

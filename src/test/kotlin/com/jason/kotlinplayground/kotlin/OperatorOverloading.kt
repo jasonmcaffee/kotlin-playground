@@ -1,4 +1,4 @@
-package com.jason.kotlinplayground.kotlinbasics
+package com.jason.kotlinplayground.kotlin
 
 import org.junit.jupiter.api.Test
 import kotlin.reflect.full.memberProperties
