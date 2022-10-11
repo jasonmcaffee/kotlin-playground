@@ -12,6 +12,13 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
 import kotlin.concurrent.thread
 
+
+data class Counter(var count: Int){
+    fun increment(){
+        val temp = count
+        count = temp + 1
+    }
+}
 //https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-i-o.html
 //https://stackoverflow.com/questions/55608138/how-could-i-know-what-the-number-of-threads-is-used-by-specific-coroutines-dispa
 class Threads {
@@ -28,34 +35,37 @@ class Threads {
         assert(1 == 1)
     }
 
-    @Test fun `thread`() = runBlocking {
-        var count = 0;
-        val untilCount = 10000;
+    @Test fun `thread`() {
+        val counter = Counter(0)
+        val untilCount = 1000000;
         val threads = mutableListOf<Thread>()
         for (i in 1 until untilCount){
             val t = thread {
-                count = count + 1
-                Thread.sleep(10)
-                // println("count is $count")
+                counter.increment()
+                Thread.sleep(100)
             }
             threads.add(t)
         }
         threads.forEach{ it.join() }
-        println("final countdown: $count")
+        println("final countdown: ${counter.count}") //race condition results in sometimes being 999998, 999999
     }
 
-    @Test fun `thread2`() = runBlocking {
+    @Test fun `thread2`() {
         var count = 0;
         val untilCount = 10000;
         val executorService = Executors.newFixedThreadPool(untilCount)
-
+        val countDownLatch = CountDownLatch(untilCount - 1)
         for (i in 1 until untilCount){
             executorService.execute{
-                count = count + 1
-                // println("count is $count")
+                val temp = count
+                count = temp + 1
+                Thread.sleep(100)
+                // println("Thread name: " + Thread.currentThread().name)
+                countDownLatch.countDown()
             }
         }
-        println("final countdown: $count")
+        countDownLatch.await()
+        println("final countdown: $count") //race condition results in sometimes being 9998, or 9999
     }
 }
 
