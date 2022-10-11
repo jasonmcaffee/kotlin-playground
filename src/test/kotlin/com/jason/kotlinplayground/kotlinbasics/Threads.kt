@@ -35,7 +35,7 @@ class Threads {
         assert(1 == 1)
     }
 
-    @Test fun `thread`() {
+    @Test fun `race condition demo - thread func`() {
         val counter = Counter(0)
         val untilCount = 1000000;
         val threads = mutableListOf<Thread>()
@@ -50,7 +50,7 @@ class Threads {
         println("final countdown: ${counter.count}") //race condition results in sometimes being 999998, 999999
     }
 
-    @Test fun `thread2`() {
+    @Test fun `race condition demo - executor service`() {
         var count = 0;
         val untilCount = 10000;
         val executorService = Executors.newFixedThreadPool(untilCount)
