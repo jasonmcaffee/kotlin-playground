@@ -247,6 +247,27 @@ class Basics {
         assert(weakNuclearForce.getParticlesWithinRange(listOf("W", "Z")) == listOf("W", "Z"))
     }
 
+    interface Author{
+        val firstName: String
+        val lastName: String
+    }
+    @Test fun `objects`(){
+        var initCount = 0;
+        //note: objects differ from classes in that they cannot have constructors, however, they can have an init block
+        //anonymous object which implements the Author interface
+        val anonymousObject = object : Author {
+            init { initCount++ }
+            override val firstName = "Ernest"
+            override val lastName = "Hemingway"
+            fun getFullName(): String{
+                return "$firstName $lastName"
+            }
+        }
+
+        assert(anonymousObject.getFullName() == "Ernest Hemingway")
+        assert(initCount == 1)
+    }
+
     @Test fun `data classes`(){
         data class BigO(val n: Int, val runtimeGrowth: (n: Int) -> Int){
             fun characterize() = when (runtimeGrowth(n)){
