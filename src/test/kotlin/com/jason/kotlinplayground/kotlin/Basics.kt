@@ -298,4 +298,26 @@ class Basics {
         fun String.mask() = "*".repeat(this.length)
         assert("hello".mask() == "*****")
     }
+
+    @Test fun `destructuring`(){
+        //destructure a list
+        val items = listOf(11, 22, 33)
+        val (item1, item2, item3) = items
+        assert(item1 == 11)
+        assert(item2 == 22)
+        assert(item3 == 33)
+
+        data class Person(val firstName: String, val lastName: String)
+        val p = Person("Jason", "McAffee")
+        val (firstName, lastName) = p
+        assert(firstName == "Jason")
+        assert(lastName == "McAffee")
+        //destructure an object
+        // val person = object: Author {
+        //     override val firstName = "Jason"
+        //     override val lastName = "McAffee"
+        // }
+        //Fails because must have component1() function.
+        //val (firstName, lastName) = (person as Author)
+    }
 }

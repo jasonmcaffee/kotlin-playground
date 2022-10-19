@@ -59,7 +59,6 @@ class Threads {
                 val temp = count
                 count = temp + 1
                 Thread.sleep(100)
-                // println("Thread name: " + Thread.currentThread().name)
                 countDownLatch.countDown()
             }
         }
