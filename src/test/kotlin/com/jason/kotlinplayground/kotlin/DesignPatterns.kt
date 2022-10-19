@@ -8,15 +8,13 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
 
 class DesignPatterns {
-    @Test fun `singleton`(){
-        //singletons should be lazy (ie only instantiated when needed for the first time)
-        //singletons should be thread safe
-        //singletons should be performant.
 
-    }
-
+    //singletons should be lazy (ie only instantiated when needed for the first time)
+    //singletons should be thread safe
+    //singletons should be performant.
     //https://www.baeldung.com/kotlin/lazy-initialization
-    @Test fun `lazy initialization`(){
+    @Test fun `singleton with lazy initialization`(){
+
         val numberOfInitCalls = AtomicInteger()
         data class SlowToInit(val data: String){
             init {
@@ -35,6 +33,34 @@ class DesignPatterns {
         executorService.awaitTermination(5, TimeUnit.SECONDS)
         countDownLatch.await()
         assert(numberOfInitCalls.get() == 1)
+    }
+
+    enum class ParticleType {
+        PHOTON, PROTON, NEUTRON, ELECTRON, PION
+    }
+    @Test fun `factory`(){
+        //http://www1.udel.edu/mvb/PS146htm/146nopp.html
+        //http://www1.udel.edu/mvb/PS146htm/146ptabc.html
+        open class Particle(val mass: Double, val charge: Int)
+        class Photon(mass: Double, charge: Int): Particle(mass, charge)
+        class Proton(mass: Double, charge: Int): Particle(mass, charge)
+        class Neutron(mass: Double, charge: Int): Particle(mass, charge)
+        class Electron(mass: Double, charge: Int): Particle(mass, charge)
+        class Pion(mass: Double, charge: Int): Particle(mass, charge)
+
+        fun createParticle(particleType: ParticleType, mass: Double, charge: Int): Particle{
+            return when(particleType){
+                ParticleType.PHOTON -> Photon(mass, charge)
+                ParticleType.PROTON -> Proton(mass, charge)
+                ParticleType.NEUTRON -> Neutron(mass, charge)
+                ParticleType.ELECTRON -> Electron(mass, charge)
+                ParticleType.PION -> Pion(mass, charge)
+
+            }
+        }
+
+        val particle = createParticle(ParticleType.PROTON, 1.0, 0)
+        assert(particle is Proton)
     }
 
 }

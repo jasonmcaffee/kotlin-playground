@@ -30,6 +30,13 @@ class Basics {
         assert(double is Double)
     }
 
+    enum class Direction {
+        NORTH, SOUTH, EAST, WEST
+    }
+    @Test fun `enum`(){
+        assert(Direction.SOUTH.name == "SOUTH")
+    }
+
     @Test fun `values and variables`(){
         //prefer immutable values (val) over mutable variables (var)
         val name = "Jason"
