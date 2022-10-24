@@ -55,12 +55,33 @@ class DesignPatterns {
                 ParticleType.NEUTRON -> Neutron(mass, charge)
                 ParticleType.ELECTRON -> Electron(mass, charge)
                 ParticleType.PION -> Pion(mass, charge)
-
             }
         }
 
         val particle = createParticle(ParticleType.PROTON, 1.0, 0)
         assert(particle is Proton)
+    }
+
+    /**
+     * Static factories provide several benefits:
+     * - explicity name different object constructors
+     * - exceptions are typically not expected from a constructor, but are from other methods
+     * - constructors should be fast
+     * - potentially cache results. ie. don't recreate objects for the same value.
+     * - subclassing - less restrictive as we don't have to instantiate the constructors?
+     */
+    open class Person(val firstName: String, val lastName: String){
+        companion object StaticFactory{
+            fun fromString(fullName: String): Person{
+                val (firstName, lastName) = fullName.split(" ")
+                return Person(firstName, lastName)
+            }
+        }
+    }
+    @Test fun `static factory`(){
+        val person = Person.fromString("Jason McAffee")
+        assert(person.firstName == "Jason")
+        assert(person.lastName == "McAffee")
     }
 
 }
