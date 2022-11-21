@@ -103,7 +103,6 @@ class VendingMachine(
         currentAmountDeposited = 0.0
         refundOrChangeDispensed(amount)
     }
-
 }
 
 class VendingMachineTests {
