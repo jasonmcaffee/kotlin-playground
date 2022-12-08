@@ -30,6 +30,41 @@ class Basics {
         assert(double is Double)
     }
 
+
+    class Response{
+        val body: Any
+        constructor(b: Any){
+            body = b
+        }
+    }
+
+    class ItemGet{
+        val data: String
+        constructor(d: String){
+            data = d
+        }
+    }
+
+    class SomethingElse{
+        val someStuff: Int
+        constructor(s: Int){
+            someStuff = s
+        }
+    }
+    @Test fun `type checking`(){
+        val body: Any = ItemGet("hello")
+        assert(body is ItemGet)
+
+        val response = Response(ItemGet("hello"))
+        assert(response.body is ItemGet)
+        val itemGet = response.body as ItemGet
+        assert(itemGet.data == "hello")
+
+        val response2 = Response(SomethingElse(123))
+        assert(response2.body !is ItemGet)
+        assert(response2.body is SomethingElse)
+    }
+
     enum class Direction {
         NORTH, SOUTH, EAST, WEST
     }
