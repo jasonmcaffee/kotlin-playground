@@ -47,6 +47,7 @@ dependencies {
 	implementation("javax.persistence:javax.persistence-api")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation(kotlin("script-runtime"))
+	// implementation("org.springframework.boot:spring-boot-starter-validation")
 }
 
 tasks.withType<KotlinCompile> {
