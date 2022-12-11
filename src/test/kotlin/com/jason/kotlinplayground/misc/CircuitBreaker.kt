@@ -23,6 +23,13 @@ class CircuitBreaker(
     }
 }
 
+fun circuitBreaker(tripAfterNConsecutiveExceptions: Int, shouldRethrowExceptions: Boolean = false): (func: () -> Unit) -> Unit{
+    val cb = CircuitBreaker(tripAfterNConsecutiveExceptions, shouldRethrowExceptions)
+    return { func ->
+        cb.process { func() }
+    }
+}
+
 class CircuitBreakerTests {
     @Test
     fun `should stop after N errors`(){

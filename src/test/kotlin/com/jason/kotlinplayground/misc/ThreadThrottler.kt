@@ -1,6 +1,7 @@
 package com.jason.kotlinplayground.kotlin
 
 import org.junit.jupiter.api.Test
+import org.slf4j.LoggerFactory
 import org.springframework.util.StopWatch
 
 /*
@@ -9,22 +10,32 @@ Primitive throttler to be used for single thread throttling.
 class ThreadThrottler(
     val maxCallsPerSecond: Int
 ){
-    private val desiredExecutionTimeMs = 1000 / maxCallsPerSecond
-    var isCurrentlyThrottled = false //for testing
-    fun process(func: () -> Unit){
-        val stopWatch = StopWatch()
-        stopWatch.start()
+    private var currentCallCount = 0
+    private val stopWatch = StopWatch()
+    private val log = LoggerFactory.getLogger(ThreadThrottler::class.java)
+    /**
+     * ensure that the passed in function takes at least 1000 / maxCallsPerSecond to complete.
+     */
+    fun run(func: () -> Unit){
+        if(!stopWatch.isRunning){
+            stopWatch.start()
+        }
+
+        currentCallCount++
         try{
             func()
         } finally{
-            stopWatch.stop()
-            val durationMs = stopWatch.totalTimeMillis
-            val timeDiffMs = desiredExecutionTimeMs - durationMs
-            if(timeDiffMs > 0){
-                isCurrentlyThrottled = true
-                Thread.sleep(timeDiffMs)
-                isCurrentlyThrottled = false
+            if(currentCallCount >= maxCallsPerSecond){
+                stopWatch.stop()
+                val durationMs = stopWatch.totalTimeMillis
+                val timeDiffMs = 1000 - durationMs
+                if(timeDiffMs > 0){
+                    currentCallCount = 0
+//                    log.info("Throttling for $timeDiffMs ms") // we probably dont want to log this.
+                    Thread.sleep(timeDiffMs)
+                }
             }
+
         }
     }
 }
@@ -37,7 +48,7 @@ class ThreadThrottlerTests {
         val stopWatch = StopWatch()
         stopWatch.start()
         for(i in 1..4){
-            throttler.process {
+            throttler.run {
                 val math = 1 + 1
             }
         }
@@ -52,7 +63,7 @@ class ThreadThrottlerTests {
         val stopWatch = StopWatch()
         stopWatch.start()
         for(i in 1..4){
-            throttler.process {
+            throttler.run {
                 val math = 1 + 1
                 Thread.sleep(300)
             }
