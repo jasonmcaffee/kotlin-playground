@@ -9,6 +9,7 @@ import kotlinx.coroutines.withContext
 import org.junit.jupiter.api.Test
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
+import java.util.concurrent.atomic.AtomicReference
 import kotlin.concurrent.thread
 
 
@@ -47,6 +48,25 @@ class Threads {
         }
         threads.forEach{ it.join() }
         println("final countdown: ${counter.count}") //race condition results in sometimes being 999998, 999999
+    }
+
+
+    @Test fun `thread exceptions`(){
+        val counter = Counter(0)
+        val untilCount = 10;
+        val threads = mutableListOf<Thread>()
+        val atomicException: AtomicReference<Exception> = AtomicReference()
+        for (i in 1 until untilCount){
+            val t = thread {
+                counter.increment()
+                Thread.sleep(100)
+                atomicException.set(CircuitBreakerTrippedException("boo"))
+            }
+            threads.add(t)
+        }
+        threads.forEach{ it.join() }
+        val exception = atomicException.get()
+        assert(exception is CircuitBreakerTrippedException)
     }
 
     @Test fun `race condition demo - executor service`() {

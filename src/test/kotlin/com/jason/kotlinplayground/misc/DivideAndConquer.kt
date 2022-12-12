@@ -6,16 +6,17 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
+import kotlin.concurrent.thread
 
-class CoroutineThrottler(
+class DivideAndConquer(
     val maxCallsPerSecond: Int
 ){
-    private val funcList = mutableListOf<suspend ()->Unit>()
+    private val funcList = mutableListOf<()->Unit>()
     /**
      * ensure that the passed in function takes at least 1000 / maxCallsPerSecond to complete.
      */
-    fun register(func: suspend () -> Unit){
-       funcList.add(func)
+    fun register(func: () -> Unit){
+        funcList.add(func)
     }
 
     fun run(){
@@ -25,13 +26,16 @@ class CoroutineThrottler(
 
         timeMilli { getMilli ->
             runBlocking {
-                coroutineScope {
-                    nextBatch.forEach{func ->
-                        launch {
-                            func()
-                        }
+                val threads = mutableListOf<Thread>()
+
+                nextBatch.forEach{func ->
+                    val t = thread {
+                        func()
                     }
+                    threads.add(t)
                 }
+
+                threads.forEach{ it.join() }
                 nextBatch.clear() //remove the items from the original list
                 val timeDiff = 1000 - getMilli()
                 if(timeDiff > 0 && funcList.size > 0){
@@ -44,31 +48,26 @@ class CoroutineThrottler(
     }
 }
 
-
-class CoroutineThrottlerTests {
-
-    @Test fun `should slow`() = runBlocking{
+class DivideAndConquerTests{
+    @Test fun `should divide and conquer`(){
         val cb = CircuitBreaker(8)
-        val coroutineThrottler = CoroutineThrottler(4)
-        suspend fun makeHttpCallAndUpdateTheDatabase(i: Int){
-            println("makeHttpCallAndUpdateTheDatabase $i")
-            delay(500)
-            throw Exception("boooo")
+        val divideAndConquer = DivideAndConquer(4)
+        fun makeHttpCallAndUpdateTheDatabase(i: Int){
+            println("start makeHttpCallAndUpdateTheDatabase $i")
+            Thread.sleep(500)
+            println("done makeHttpCallAndUpdateTheDatabase $i")
+            // throw Exception("boooo")
         }
 
         for(i in 1..10){
-            coroutineThrottler.register {
-                cb.process {//swallow exceptions until N are reached, then blow up.
-                    makeHttpCallAndUpdateTheDatabase(i)
-                }
+            divideAndConquer.register {
+                makeHttpCallAndUpdateTheDatabase(i)
             }
         }
         try{
-            coroutineThrottler.run()
+            divideAndConquer.run()
         }catch(e: Exception){
             println("exception: ${e.message}")
         }
-
     }
-
 }

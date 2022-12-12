@@ -1,5 +1,6 @@
 package com.jason.kotlinplayground.kotlin
 
+import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
 
 class CircuitBreakerTrippedException(message: String): Exception(message)
@@ -10,7 +11,7 @@ class CircuitBreaker(
 ) {
     var consecutiveExceptionCount: Int = 0
 
-    fun process(func: () -> Unit){
+    suspend fun process(func: suspend () -> Unit){
         try{
             func()
             consecutiveExceptionCount = 0
@@ -23,16 +24,10 @@ class CircuitBreaker(
     }
 }
 
-fun circuitBreaker(tripAfterNConsecutiveExceptions: Int, shouldRethrowExceptions: Boolean = false): (func: () -> Unit) -> Unit{
-    val cb = CircuitBreaker(tripAfterNConsecutiveExceptions, shouldRethrowExceptions)
-    return { func ->
-        cb.process { func() }
-    }
-}
 
 class CircuitBreakerTests {
     @Test
-    fun `should stop after N errors`(){
+    fun `should stop after N errors`() = runBlocking{
         var circuitBreakerTrippedCount = 0
         try{
             val circuitBreaker = CircuitBreaker(1)
@@ -47,7 +42,7 @@ class CircuitBreakerTests {
     }
 
     @Test
-    fun `should continue processing with intermittent errors`(){
+    fun `should continue processing with intermittent errors`() = runBlocking{
         var circuitBreakerTrippedCount = 0
         try{
             val circuitBreaker = CircuitBreaker(2)
