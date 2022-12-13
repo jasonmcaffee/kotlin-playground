@@ -28,7 +28,9 @@ class CoroutineThrottler(
                 coroutineScope {
                     nextBatch.forEach{func ->
                         launch {
+                            println("Start func")
                             func()
+                            println("End func")
                         }
                     }
                 }
@@ -51,8 +53,8 @@ class CoroutineThrottlerTests {
         val cb = CircuitBreaker(8)
         val coroutineThrottler = CoroutineThrottler(4)
         suspend fun makeHttpCallAndUpdateTheDatabase(i: Int){
-            println("makeHttpCallAndUpdateTheDatabase $i")
             delay(500)
+            println("makeHttpCallAndUpdateTheDatabase $i")
             throw Exception("boooo")
         }
 
