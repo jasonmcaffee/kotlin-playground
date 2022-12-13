@@ -11,7 +11,7 @@ class CircuitBreaker(
 ) {
     var consecutiveExceptionCount: Int = 0
 
-    suspend fun process(func: suspend () -> Unit){
+    fun process(func: () -> Unit){
         try{
             func()
             consecutiveExceptionCount = 0

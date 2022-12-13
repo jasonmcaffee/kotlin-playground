@@ -52,8 +52,8 @@ class CoroutineThrottlerTests {
     @Test fun `should slow`() = runBlocking{
         val cb = CircuitBreaker(8)
         val coroutineThrottler = CoroutineThrottler(4)
-        suspend fun makeHttpCallAndUpdateTheDatabase(i: Int){
-            delay(500)
+        fun makeHttpCallAndUpdateTheDatabase(i: Int){
+            Thread.sleep(500)
             println("makeHttpCallAndUpdateTheDatabase $i")
             throw Exception("boooo")
         }

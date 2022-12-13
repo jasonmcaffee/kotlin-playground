@@ -55,7 +55,7 @@ class DivideAndConquer(
     }
 
     //https://www.baeldung.com/kotlin/coroutines-waiting-for-multiple-threads
-    fun runUsingAsync(){
+    fun runUsingAsyncOne(){
         val nextEndIndex = if(funcList.size - 1 < maxCallsPerSecond) funcList.size - 1 else maxCallsPerSecond
         val nextBatch = funcList.subList(0, nextEndIndex)
         if(nextBatch.isEmpty()){ return }
@@ -65,9 +65,7 @@ class DivideAndConquer(
                 withContext(coroutineContext){//no need for awaitAll with this approach.
                     nextBatch.forEach{ func ->
                         async(Dispatchers.IO) {//you must specify the context here or it will be done synchronously.
-                            println("running func...")
                             func()
-                            println("done running func.")
                         }
                     }
                 }
@@ -79,31 +77,52 @@ class DivideAndConquer(
                 }
             }
         }
+        runUsingAsyncOne()
+    }
+    fun runUsingAsyncTwo(){
+        val nextEndIndex = if(funcList.size < maxCallsPerSecond) funcList.size else maxCallsPerSecond
+        val nextBatch = funcList.subList(0, nextEndIndex)
+        println("funcList size: ${funcList.size}")
+        if(nextBatch.isEmpty()){ return }
+
+        timeMilli { getMilli ->
+            runBlocking {//use runblocking here so that we don't need to do the entire call chain as suspend functions
+                val deferreds = mutableListOf<Deferred<*>>()
+
+                nextBatch.forEach{ func ->
+                    val deferred = async(Dispatchers.IO) {
+                        func()
+                    }
+                    deferreds.add(deferred)
+                }
+                deferreds.awaitAll()
+                nextBatch.clear() //remove the items from the original list
+                val timeDiff = 1000 - getMilli()
+                if(timeDiff > 0 && funcList.size > 0){
+                    println("sleeping for $timeDiff ms")
+                    delay(timeDiff)
+                }
+            }
+        }
+        runUsingAsyncTwo()
     }
 }
 
-//alternative approach that works.
-//                val deferreds = mutableListOf<Deferred<*>>()
-//
-//                nextBatch.forEach{ func ->
-//                    val deferred = GlobalScope.async {
-//                        println("running func...")
-//                        func()
-//                        println("done running func.")
-//                    }
-//                    deferreds.add(deferred)
-//                }
-//                deferreds.awaitAll()
-
 class DivideAndConquerTests{
     @Test fun `should divide and conquer`(){
-        val cb = CircuitBreaker(8)
+        val cb = CircuitBreaker(2)
         val divideAndConquer = DivideAndConquer(4)
         fun makeHttpCallAndUpdateTheDatabase(i: Int){
-            println("start makeHttpCallAndUpdateTheDatabase $i")
-            Thread.sleep(500)
-            println("done makeHttpCallAndUpdateTheDatabase $i")
-            // throw Exception("boooo")
+            cb.process {
+                println("start makeHttpCallAndUpdateTheDatabase $i")
+                if(i >= 3){
+                    throw Exception("boo")
+                }
+                Thread.sleep(500)
+                println("done makeHttpCallAndUpdateTheDatabase $i")
+
+            }
+
         }
 
         for(i in 1..10){
@@ -112,9 +131,25 @@ class DivideAndConquerTests{
             }
         }
         try{
-            divideAndConquer.runUsingAsync()
+//            start makeHttpCallAndUpdateTheDatabase 1
+//            start makeHttpCallAndUpdateTheDatabase 3
+//            start makeHttpCallAndUpdateTheDatabase 2
+//            start makeHttpCallAndUpdateTheDatabase 4
+//            done makeHttpCallAndUpdateTheDatabase 1
+//            done makeHttpCallAndUpdateTheDatabase 2
+//            exception here: Circuit breaker encountered 2 exceptions, exceeding max of 2
+//            divideAndConquer.runUsingAsyncOne()
+
+//            start makeHttpCallAndUpdateTheDatabase 1
+//            start makeHttpCallAndUpdateTheDatabase 2
+//            start makeHttpCallAndUpdateTheDatabase 3
+//            start makeHttpCallAndUpdateTheDatabase 4
+//            done makeHttpCallAndUpdateTheDatabase 2
+//            done makeHttpCallAndUpdateTheDatabase 1
+//            exception here: Circuit breaker encountered 2 exceptions, exceeding max of 2
+            divideAndConquer.runUsingAsyncTwo()
         }catch(e: Exception){
-            println("exception: ${e.message}")
+            println("exception here: ${e.message}")
         }
     }
 }
