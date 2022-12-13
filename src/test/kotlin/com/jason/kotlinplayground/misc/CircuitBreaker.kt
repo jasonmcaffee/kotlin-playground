@@ -22,6 +22,21 @@ class CircuitBreaker(
             if(shouldRethrowExceptions){ throw e }
         }
     }
+
+    suspend fun processSuspend(func: suspend () -> Unit){
+        try{
+            func()
+            consecutiveExceptionCount = 0
+        }catch(e: Exception){
+            if(++consecutiveExceptionCount >= tripAfterNConsecutiveExceptions){
+                throw CircuitBreakerTrippedException("Circuit breaker encountered $consecutiveExceptionCount exceptions, exceeding max of $tripAfterNConsecutiveExceptions")
+            }
+            if(shouldRethrowExceptions){ throw e }
+        }
+    }
+
+
+
 }
 
 

@@ -3,6 +3,8 @@ package com.jason.kotlinplayground.misc
 import com.jason.kotlinplayground.kotlin.CircuitBreaker
 import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
+import org.testcontainers.shaded.okhttp3.OkHttpClient
+import org.testcontainers.shaded.okhttp3.Request
 import java.util.concurrent.atomic.AtomicReference
 import kotlin.concurrent.thread
 
@@ -118,9 +120,8 @@ class DivideAndConquerTests{
                 if(i >= 3){
                     throw Exception("boo")
                 }
-                Thread.sleep(500)
+                makeHttpRequest()
                 println("done makeHttpCallAndUpdateTheDatabase $i")
-
             }
 
         }
@@ -150,6 +151,22 @@ class DivideAndConquerTests{
             divideAndConquer.runUsingAsyncTwo()
         }catch(e: Exception){
             println("exception here: ${e.message}")
+        }
+    }
+}
+
+fun makeHttpRequest(){ //this takes about 450 ms
+    timeMilli { getMilli ->
+        val response = try{
+            val client = OkHttpClient()
+            val request = Request.Builder()
+                .url("https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg")
+                .build()
+            val call = client.newCall(request)
+            val response = call.execute()
+            println("got response in ${getMilli()} ms ${response.body()}")
+        }catch (e:Exception){
+            println("got exception in ${getMilli()} ms ${e.message}")
         }
     }
 }
