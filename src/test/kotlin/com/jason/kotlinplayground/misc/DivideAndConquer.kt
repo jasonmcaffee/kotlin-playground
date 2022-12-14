@@ -19,94 +19,99 @@ class DivideAndConquer(
         funcList.add(func)
     }
 
-    fun run(){
-        val nextEndIndex = if(funcList.size - 1 < maxCallsPerSecond) funcList.size - 1 else maxCallsPerSecond
+    private fun getNextBatch(): MutableList<() -> Unit> {
+        val nextEndIndex = if(funcList.size < maxCallsPerSecond) funcList.size else maxCallsPerSecond
         val nextBatch = funcList.subList(0, nextEndIndex)
-        if(nextBatch.isEmpty()){ return }
-
-        timeMilli { getMilli ->
-            runBlocking {
-                val threads = mutableListOf<Thread>()
-
-                val atomicException = AtomicReference<Exception>(null)
-                nextBatch.forEach{func ->
-                    val t = thread {
-                        try{
-                            func()
-                        }catch (e: Exception){
-                            atomicException.set(e)
+        return nextBatch
+    }
+    fun runUsingThreads(){
+        while (funcList.size > 0){
+            val nextBatch = getNextBatch()
+            timeMilli { getMilli ->
+                runBlocking {//so we can call delay(ms)
+                    val threads = mutableListOf<Thread>()
+                    val atomicException = AtomicReference<Exception>(null)//track whether a thread threw an exception
+                    nextBatch.forEach{func ->
+                        val t = thread {
+                            try{
+                                func()
+                            }catch (e: Exception){
+                                atomicException.set(e)
+                            }
                         }
-
+                        threads.add(t)
                     }
-                    threads.add(t)
-                }
-
-                threads.forEach{ it.join() }
-                nextBatch.clear() //remove the items from the original list
-                if(atomicException.get() != null){
-                    throw atomicException.get()
-                }
-                val timeDiff = 1000 - getMilli()
-                if(timeDiff > 0 && funcList.size > 0){
-                    println("sleeping for $timeDiff ms")
-                    delay(timeDiff)
+                    nextBatch.clear() //remove batch from the original list, regardless if they fail
+                    threads.forEach{ it.join() }//wait for all threads to finish.
+                    //throw the last exception encountered in the thread so that it bubbles up the stack.
+                    if(atomicException.get() != null){
+                        throw atomicException.get()
+                    }
+                    //sleep/throttle if we're moving too fast.
+                    slowDownIfNeeded(getMilli())
                 }
             }
         }
-        run()
+    }
+
+    private fun processAll(strategy: (nextBatch: MutableList<() -> Unit>)-> Unit){
+        while (funcList.size > 0) {
+            val nextBatch = getNextBatch()
+            timeMilli { getMilli ->
+                runBlocking {//so we can call delay(ms)
+                    strategy(nextBatch)
+                    slowDownIfNeeded(getMilli())
+                }
+            }
+        }
+    }
+
+    private suspend fun slowDownIfNeeded(msDurationOfLastBatch: Long){
+        val timeDiff = 1000 - msDurationOfLastBatch
+        if(timeDiff > 0 && funcList.size > 0){
+            println("sleeping for $timeDiff ms")
+            delay(timeDiff)
+        }
     }
 
     //https://www.baeldung.com/kotlin/coroutines-waiting-for-multiple-threads
     fun runUsingAsyncOne(){
-        val nextEndIndex = if(funcList.size - 1 < maxCallsPerSecond) funcList.size - 1 else maxCallsPerSecond
-        val nextBatch = funcList.subList(0, nextEndIndex)
-        if(nextBatch.isEmpty()){ return }
-
-        timeMilli { getMilli ->
-            runBlocking {//use runblocking here so that we don't need to do the entire call chain as suspend functions
-                withContext(coroutineContext){//no need for awaitAll with this approach.
-                    nextBatch.forEach{ func ->
-                        async(Dispatchers.IO) {//you must specify the context here or it will be done synchronously.
-                            func()
+        while(funcList.size > 0){
+            val nextBatch = getNextBatch()
+            timeMilli { getMilli ->
+                runBlocking {//so we can call delay without being a suspend func
+                    withContext(coroutineContext){//no need for awaitAll with this approach.
+                        nextBatch.forEach{ func ->
+                            async(Dispatchers.IO) {//you must specify the context here or it will be done synchronously for network calls.
+                                func()
+                            }
                         }
-                    }
-                }
-                nextBatch.clear() //remove the items from the original list
-                val timeDiff = 1000 - getMilli()
-                if(timeDiff > 0 && funcList.size > 0){
-                    println("sleeping for $timeDiff ms")
-                    delay(timeDiff)
+                        nextBatch.clear() //remove batch from the original list, regardless if they fail
+                    }//all async are completed by this point
+                    //sleep/throttle if we're moving too fast.
+                    slowDownIfNeeded(getMilli())
                 }
             }
         }
-        runUsingAsyncOne()
     }
     fun runUsingAsyncTwo(){
-        val nextEndIndex = if(funcList.size < maxCallsPerSecond) funcList.size else maxCallsPerSecond
-        val nextBatch = funcList.subList(0, nextEndIndex)
-        println("funcList size: ${funcList.size}")
-        if(nextBatch.isEmpty()){ return }
-
-        timeMilli { getMilli ->
-            runBlocking {//use runblocking here so that we don't need to do the entire call chain as suspend functions
-                val deferreds = mutableListOf<Deferred<*>>()
-
-                nextBatch.forEach{ func ->
-                    val deferred = async(Dispatchers.IO) {
-                        func()
+        while(funcList.size > 0) {
+            val nextBatch = getNextBatch()
+            timeMilli { getMilli ->
+                runBlocking {//so we can call delay without being a suspend func
+                    val deferreds = mutableListOf<Deferred<*>>()
+                    nextBatch.forEach{ func ->
+                        val deferred = async(Dispatchers.IO) {
+                            func()
+                        }
+                        deferreds.add(deferred)
                     }
-                    deferreds.add(deferred)
-                }
-                deferreds.awaitAll()
-                nextBatch.clear() //remove the items from the original list
-                val timeDiff = 1000 - getMilli()
-                if(timeDiff > 0 && funcList.size > 0){
-                    println("sleeping for $timeDiff ms")
-                    delay(timeDiff)
+                    nextBatch.clear() //remove batch from the original list, regardless if they fail
+                    deferreds.awaitAll()
+                    slowDownIfNeeded(getMilli())
                 }
             }
         }
-        runUsingAsyncTwo()
     }
 }
 
