@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
 import org.testcontainers.shaded.okhttp3.OkHttpClient
 import org.testcontainers.shaded.okhttp3.Request
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
@@ -19,10 +20,10 @@ import kotlin.concurrent.thread
 class DivideAndConquer(
     val maxCallsPerSecond: Int
 ){
+    //list of functions to run when runUsingThreadJoins, runUsingAsync, etc are call
     private val funcList = mutableListOf<()->Unit>()
-    /**
-     * ensure that the passed in function takes at least 1000 / maxCallsPerSecond to complete.
-     */
+
+    //register a func to be run when runUsingThreadJoins, etc are called.
     fun register(func: () -> Unit){
         funcList.add(func)
     }
@@ -93,27 +94,33 @@ class DivideAndConquer(
 
     /**
      * Uses an executor service to create and manage threads.
-     * TODO: This probably isn't the most efficient approach.  Alternatively, keep N threads alive in the threadpool and use a countdown latch
-     * to await processing. i.e. move executorService outside of this function and don't shut it down.
      * https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadPoolExecutor.html
      *
      */
     fun runUsingExecutorServiceThreadPool(){
+        //for efficiency, use the same threads between batches
+        val executorService = Executors.newFixedThreadPool(maxCallsPerSecond)
         processBatchesUsingStrategy { nextBatch ->
-            val executorService = Executors.newFixedThreadPool(nextBatch.size)
             val atomicException = AtomicReference<Exception>(null)//track whether a thread threw an exception
+            val countDownLatch = CountDownLatch(nextBatch.size - 1)
             nextBatch.forEach{func ->
                 executorService.execute{
                     try{
                         func()
                     }catch(e: Exception){
                         atomicException.set(e)
+                    }finally {
+                        countDownLatch.countDown()
                     }
                 }
             }
             nextBatch.clear() //remove batch from the original list, regardless if they fail
-            executorService.shutdown()
-            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS)
+            countDownLatch.await()//wait for current batch to complete
+            //if we've processed the entire list, shutdown.
+            if(funcList.size <= 0){
+                executorService.shutdown()
+                executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS)  //this is redundant with countDownLatch.await.
+            }
             //throw the last exception encountered in the thread so that it bubbles up the stack.
             if(atomicException.get() != null){
                 throw atomicException.get()
