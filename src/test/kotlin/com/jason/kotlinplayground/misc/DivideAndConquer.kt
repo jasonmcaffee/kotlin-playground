@@ -4,7 +4,6 @@ import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
 import org.testcontainers.shaded.okhttp3.OkHttpClient
 import org.testcontainers.shaded.okhttp3.Request
-import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
@@ -42,7 +41,7 @@ class DivideAndConquer(
      * Each strategy is responsible for calling nextBatch.clear when they have processed it ("processed" may have different
      * meanings, depending on the strategy, but most of the time it means each item in the list has started running)
      */
-    private fun processAll(strategy: (nextBatch: MutableList<() -> Unit>)-> Unit){
+    private fun processBatchesUsingStrategy(strategy: (nextBatch: MutableList<() -> Unit>)-> Unit){
         while (funcList.size > 0) {
             val nextBatch = getNextBatch()
             timeMilli { getMilli ->
@@ -71,7 +70,7 @@ class DivideAndConquer(
      * exception, and raise it up after the threads have finished processing.
      */
     fun runUsingThreadsJoin(){
-        processAll { nextBatch ->
+        processBatchesUsingStrategy { nextBatch ->
             val threads = mutableListOf<Thread>()
             val atomicException = AtomicReference<Exception>(null)//track whether a thread threw an exception
             nextBatch.forEach{func ->
@@ -100,7 +99,7 @@ class DivideAndConquer(
      *
      */
     fun runUsingExecutorServiceThreadPool(){
-        processAll { nextBatch ->
+        processBatchesUsingStrategy { nextBatch ->
             val executorService = Executors.newFixedThreadPool(nextBatch.size)
             val atomicException = AtomicReference<Exception>(null)//track whether a thread threw an exception
             nextBatch.forEach{func ->
@@ -127,7 +126,7 @@ class DivideAndConquer(
      * underlying plumbing.
      */
     fun runUsingAsyncWithContext(){
-        processAll { nextBatch ->
+        processBatchesUsingStrategy { nextBatch ->
             runBlocking {//so we use runBlocking's coroutineScope.coroutineContext to await all asyncs.
                 withContext(Dispatchers.IO){//no need for awaitAll with this approach.
                     nextBatch.forEach{ func ->
@@ -145,7 +144,7 @@ class DivideAndConquer(
      * Alternative approach to asyncWithContext.  We can just keep a list of deferreds and await them all to complete.
      */
     fun runUsingAsyncAwaitAll(){
-        processAll { nextBatch ->
+        processBatchesUsingStrategy { nextBatch ->
             runBlocking {//async needs a coroutine scope
                 val deferreds = mutableListOf<Deferred<*>>()
                 nextBatch.forEach{ func ->
