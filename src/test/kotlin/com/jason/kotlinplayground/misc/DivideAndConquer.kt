@@ -14,6 +14,7 @@ import kotlin.concurrent.thread
  * Explore different approaches to running things in parallel.
  *
  * References:
+ * https://kotlinlang.org/docs/async-programming.html
  * https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-i-o.html
  * https://www.baeldung.com/kotlin/coroutines-waiting-for-multiple-threads
  */
@@ -160,7 +161,20 @@ class DivideAndConquer(
                     })
                 }
                 nextBatch.clear() //remove batch from the original list, regardless if they fail
-                deferreds.awaitAll()
+                deferreds.awaitAll() //not needed with the runBlocking unless you need the results of each deferred.
+            }
+        }
+    }
+
+    fun runUsingLaunch(){
+        processBatchesUsingStrategy { nextBatch ->
+            runBlocking {
+                nextBatch.forEach{ func ->
+                    launch(Dispatchers.IO) {
+                        func()
+                    }
+                }
+                nextBatch.clear() //remove batch from the original list, regardless if they fail
             }
         }
     }
@@ -248,6 +262,25 @@ class DivideAndConquerTests{
 //        end asyncAwaitAll 4 complete in 252 ms
 //        task asyncAwaitAll completed in 1255 ms
         printTime("asyncAwaitAll") { divideAndConquer.runUsingAsyncAwaitAll() }
+    }
+
+    @Test fun `should divide and conquer using launch strategy`(){
+        val divideAndConquer = DivideAndConquer(2)
+        for(i in 1..4){
+            divideAndConquer.register { doWork(i, "launch") }
+        }
+
+//        start launch 2
+//        start launch 1
+//        end launch 1 complete in 636 ms
+//        end launch 2 complete in 689 ms
+//        sleeping for 283 ms
+//        start launch 3
+//        start launch 4
+//        end launch 4 complete in 241 ms
+//        end launch 3 complete in 245 ms
+//        task launch completed in 1254 ms
+        printTime("launch") { divideAndConquer.runUsingLaunch() }
     }
 }
 
