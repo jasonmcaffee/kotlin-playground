@@ -1,0 +1,6174 @@
+{
+  "accounts": [
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "balances": {
+        "available": 100,
+        "current": 110,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "0000",
+      "name": "Plaid Checking",
+      "official_name": "Plaid Gold Standard 0% Interest Checking",
+      "persistent_account_id": "8cfb8beb89b774ee43b090625f0d61d0814322b43bff984eaf60386e",
+      "subtype": "checking",
+      "type": "depository"
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "balances": {
+        "available": 200,
+        "current": 210,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "1111",
+      "name": "Plaid Saving",
+      "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+      "persistent_account_id": "211a4e5d8361a3afb7a3886362198c7306e00a313b5aa944c20d34b6",
+      "subtype": "savings",
+      "type": "depository"
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "balances": {
+        "available": null,
+        "current": 1000,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "2222",
+      "name": "Plaid CD",
+      "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+      "persistent_account_id": "2a01484e1b5ef0b54fbcb89658b2764529bbec94a16f7b95481280a7",
+      "subtype": "cd",
+      "type": "depository"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "balances": {
+        "available": null,
+        "current": 410,
+        "iso_currency_code": "USD",
+        "limit": 2000,
+        "unofficial_currency_code": null
+      },
+      "mask": "3333",
+      "name": "Plaid Credit Card",
+      "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+      "subtype": "credit card",
+      "type": "credit"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "balances": {
+        "available": 43200,
+        "current": 43200,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "4444",
+      "name": "Plaid Money Market",
+      "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+      "subtype": "money market",
+      "type": "depository"
+    },
+    {
+      "account_id": "zpBjddkZ8afBZmqPXa4kuJeablr6VjflB3QAj",
+      "balances": {
+        "available": null,
+        "current": 320.76,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "5555",
+      "name": "Plaid IRA",
+      "official_name": null,
+      "subtype": "ira",
+      "type": "investment"
+    },
+    {
+      "account_id": "BENVzz4n8DS9arBP4o5EtPBDeLv59Ec45zg9V",
+      "balances": {
+        "available": null,
+        "current": 23631.9805,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "6666",
+      "name": "Plaid 401k",
+      "official_name": null,
+      "subtype": "401k",
+      "type": "investment"
+    },
+    {
+      "account_id": "34V8eey7aGu5x6Bk8gWRi53zvQep6VIZbmE7N",
+      "balances": {
+        "available": null,
+        "current": 65262,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "7777",
+      "name": "Plaid Student Loan",
+      "official_name": null,
+      "subtype": "student",
+      "type": "loan"
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNVdrK6jsgP6ReA",
+      "balances": {
+        "available": null,
+        "current": 56302.06,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "8888",
+      "name": "Plaid Mortgage",
+      "official_name": null,
+      "subtype": "mortgage",
+      "type": "loan"
+    }
+  ],
+  "item": {
+    "available_products": [
+      "assets",
+      "balance",
+      "signal",
+      "identity",
+      "identity_match",
+      "income",
+      "investments",
+      "liabilities"
+    ],
+    "billed_products": [
+      "auth",
+      "transactions"
+    ],
+    "consent_expiration_time": null,
+    "error": null,
+    "institution_id": "ins_20",
+    "item_id": "namqooZkPMuLkrqlboVKhEGqwm1qRph6meqxw",
+    "products": [
+      "auth",
+      "transactions"
+    ],
+    "update_type": "background",
+    "webhook": "https://www.genericwebhookurl.com/webhook"
+  },
+  "request_id": "NbeKqB6GnfK86Ec",
+  "total_transactions": 392,
+  "transactions": [
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "el49jjdkrPcNW7kBoeKjtmPk3d9jBmhr9e54V",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "x1LN33AeogfbeBw4mrAPSwLy3MbQxwi64LV3Z",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2024-02-21",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "avJnaazWABtxLRmq5XjvIz7P5oZbyzfZ5VQBp",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2024-02-22",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2024-02-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "k3XV117KaxFVKlgNeB71teDrGQ6b1efL6AdlV",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2024-02-21",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2024-02-21",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "lxgwLLer49uMvkBP96Nluvgk5lGrDvupo6dVy",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2024-02-21",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2024-02-21",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "qP5zEELdebigd3ZrNBznimPlzeWqGmhgrB7zE",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2024-02-19",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2024-02-20",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "Kvwxjj1zB4trMAED1XG5S1pr8ydWe1FRprAx9",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2024-02-19",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-19",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "BENVzz4n8DS9arBP4o5EtPy9JBRwxPu4MV8bE",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2024-02-09",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "4NwEQQ9e4ac1PyjR8VqEteQKRmDnaefJb4AQg",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2024-02-06",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2024-02-07",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "rkXBllpaQgt8aAez7kM3CjrwebGq9ji7JN6eP",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-04",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "NvV4QQoxd7t9p8ZDoQm5t3enZ7Q693Hy6k54W",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-03",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "77vG116MjafKq6mk83WEiWM4r96vDWidJrnoM",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2024-02-03",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "jB3DMMjqdJFQqRB4bEJAC96NEyo3p9t6WlLVv",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-02-03",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "PvRPMM8a4Qt6gLvDn485SZ1KdlEVeZCo6VWPo",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2024-01-24",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "34V8eey7aGu5x6Bk8gWRi5r643LdB5CZl5nDx",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2024-01-24",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2024-01-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "zpBjddkZ8afBZmqPXa4kuJQV5epodJclN6L5a",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "QwQj11E4NXHBWP8LnKy5uV1ro9QbGVCwmR75z",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "dveyPPxnKDt4r7jzvAqWCLWqM9EaxLuJErQjd",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2024-01-22",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "x1LN33AeogfbeBw4mrAPSwLDwPDaPQi6Mg9QZ",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2024-01-23",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2024-01-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "RvJ7LLWNPQtnJPq1rvE5IN97Nz7LzWFaNMzPy",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2024-01-22",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2024-01-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "6jJAMMRZPeuM5ZDo8mv3uWVeWxerxAf8Qkr15",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2024-01-22",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2024-01-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "XvpLllyZMgtaBExgmzqlc8Dw84w74NfbkJ51r",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2024-01-20",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2024-01-21",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "DAKl33PmW1HoNrJLP9R5cg4lg6lq6BH3Ndz4l",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2024-01-20",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-20",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "ZXwoKKv1L8Flbxwdn8MKUa3gangDnXSeaW8zP",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2024-01-10",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "dveyPPxnKDt4r7jzvAqWCLWPLZPVZaFJy9PXd",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2024-01-07",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2024-01-08",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "VvoM88beQat3Xo8Wn195CQpMQnMynbC9Ql6qb",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "avJnaazWABtxLRmq5XjvIz7Wz4WX4bCZ6nRXp",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-04",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "PvRPMM8a4Qt6gLvDn485SZ1PZJPoJVcoLjwKo",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2024-01-04",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "NvV4QQoxd7t9p8ZDoQm5t3e43d4Ad6hy8arVW",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2024-01-04",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "4NwEQQ9e4ac1PyjR8VqEteQzeJzNJnuJpWgmg",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2023-12-25",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "Mv9aeep3xjtVLgnApEx5tzLazoavoDCLXkDzm",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2023-12-25",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-12-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "wMD4BBW7pbfn7DAaQ94VI4kn4xnRx6uPzMgEg",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "bveb44BAl6tdP7gK1R64CKEzKBzkBDHmnPGvz",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "o4ZKggM3jJup3AKqbzMru5KN5WNAWJToQAX1x",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2023-12-23",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "jB3DMMjqdJFQqRB4bEJAC96W9XWxX3h6K9yQv",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2023-12-24",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-12-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "5PzWZZvQN4iBLWpvkzKEuo6BoeBpemu5XJxGZ",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2023-12-23",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2023-12-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "Jvd3PPMrz4t7ZgqoMLQ5cDl3Dr3KrBfBXxbQB",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2023-12-23",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2023-12-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "k3XV117KaxFVKlgNeB71teD4eq4RqbuL7axJJ",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2023-12-21",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2023-12-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "lxgwLLer49uMvkBP96Nluvg1vA19ArCpBNLaE",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2023-12-21",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-21",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "1drojjbkx4u5DjwRQGnqix8rxnryn1Cp9VQ3V",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-12-11",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "77vG116MjafKq6mk83WEiWMxWNxPNvfdb3NwM",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2023-12-08",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-12-09",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "qP5zEELdebigd3ZrNBznimPBmoBRoqHglxJ6V",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "el49jjdkrPcNW7kBoeKjtmPXmAX1AjHrvPMxV",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "Mv9aeep3xjtVLgnApEx5tzLazoavoDCLXkDmm",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2023-12-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "ZXwoKKv1L8Flbxwdn8MKUa3gangDnXSeaW8xP",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-12-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "QwQj11E4NXHBWP8LnKy5uV1jVwjkwbtwPBkjz",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2023-11-25",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "LvGd77LB34tx1pEkLJv5I1Xd1BdJB9ck6BLod",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2023-11-25",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-11-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "Kvwxjj1zB4trMAED1XG5S1px17xJ7WcRoJ6En",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "mdWlppQzNgu1zKlRbG3qtNpWN7Wg75Fgek739",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "gKwRee4yBPuj9DK5w3geUPwmPLmJLEiEN9lPe",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2023-11-23",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "1drojjbkx4u5DjwRQGnqix8rxnryn1Cp9VQDV",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2023-11-24",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-11-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "rkXBllpaQgt8aAez7kM3Cjrgj1gk1qu7bmydp",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2023-11-23",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2023-11-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "zpBjddkZ8afBZmqPXa4kuJQnJrnwrouldjE3e",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2023-11-23",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2023-11-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "BENVzz4n8DS9arBP4o5EtPyMPvMnvwi4va7za",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2023-11-21",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2023-11-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "34V8eey7aGu5x6Bk8gWRi5rE5eEZedTZgXwm5",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2023-11-21",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-21",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "pNbr881x7PcoxBrKR7Nzc6j56e5ke9fpleDkm",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-11-11",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "LvGd77LB34tx1pEkLJv5I1Xd1BdJB9ck6BL3d",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2023-11-08",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-11-09",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "x1LN33AeogfbeBw4mrAPSwLDwPDaPQi6Mg9yW",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "pNbr881x7PcoxBrKR7Nzc6j56e5ke9fpleDXm",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "8e4nLLl17Dh7XyAKlpadcAavA6vm6lfW75xNk",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2023-11-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "gKwRee4yBPuj9DK5w3geUPwmPLmJLEiEN9lye",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-11-05",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "o4ZKggM3jJup3AKqbzMru5KN5WNAWJToQAXvx",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2023-10-26",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "o4ZKggM3jJup3AKqbzMru5KN5WNAWJToQAXrx",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2023-10-26",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-10-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "dveyPPxnKDt4r7jzvAqWCLWPLZPVZaFJy9PB5",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "yL9PxxGQgMtbvzmNpaMjSdNKdRKmRQc4PMrvg",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "8e4nLLl17Dh7XyAKlpadcAavA6vm6lfW75xgk",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2023-10-24",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "EGRqxxjyAwcBPw8Djlp5urXqrnqpnVf48zj6W",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2023-10-25",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-10-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "avJnaazWABtxLRmq5XjvIz7Wz4WX4bCZ6nRkj",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2023-10-24",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2023-10-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "4NwEQQ9e4ac1PyjR8VqEteQzeJzNJnuJpWglj",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2023-10-24",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2023-10-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "NvV4QQoxd7t9p8ZDoQm5t3e43d4Ad6hy8arXR",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2023-10-22",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2023-10-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "PvRPMM8a4Qt6gLvDn485SZ1PZJPoJVcoLjwX3",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2023-10-22",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "gKwRee4yBPuj9DK5w3geUPwmPLmJLEiEN9lre",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-10-12",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "Wvw1EEmQZLtZLKWodg35c3R13L1rLDh63xWBL",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2023-10-09",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-10-10",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "jB3DMMjqdJFQqRB4bEJAC96W9XWxX3h6K9yZJ",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-07",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "PvRPMM8a4Qt6gLvDn485SZ1PZJPoJVcoLjwjz",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "el49jjdkrPcNW7kBoeKjtmPXmAX1AjHrvPMPz",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2023-10-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "77vG116MjafKq6mk83WEiWMxWNxPNvfdb3N3e",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-10-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "jB3DMMjqdJFQqRB4bEJAC96W9XWxX3h6K9y9P",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2023-09-26",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "8e4nLLl17Dh7XyAKlpadcAavA6vm6lfW75xzk",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2023-09-26",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-09-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "77vG116MjafKq6mk83WEiWMxWNxPNvfdb3NMR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "9QWbppqLedTxl1JrqvpaILJkLDkMDwF4oBlJB",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "EGRqxxjyAwcBPw8Djlp5urXqrnqpnVf48zjrW",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2023-09-24",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "QwQj11E4NXHBWP8LnKy5uV1jVwjkwbtwPBkBW",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2023-09-25",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-09-25",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "el49jjdkrPcNW7kBoeKjtmPXmAX1AjHrvPM7p",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 12,
+      "authorized_date": "2023-09-24",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+          "name": "McDonald's",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "mcdonalds.com"
+        }
+      ],
+      "date": "2023-09-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": "3322"
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/mcdonalds_619.png",
+      "merchant_entity_id": "vzWXDWBjB06j5BJoD3Jo84OJZg7JJzmqOZA22",
+      "merchant_name": "McDonald's",
+      "name": "McDonald's",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "QwQj11E4NXHBWP8LnKy5uV1jVwjkwbtwPBk3J",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "mcdonalds.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 4.33,
+      "authorized_date": "2023-09-24",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Coffee Shop"
+      ],
+      "category_id": "13005043",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+          "name": "Starbucks",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "starbucks.com"
+        }
+      ],
+      "date": "2023-09-24",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/starbucks_956.png",
+      "merchant_entity_id": "NZAJQ5wYdo1W1p39X5q5gpb15OMe39pj4pJBb",
+      "merchant_name": "Starbucks",
+      "name": "Starbucks",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_COFFEE",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "ZXwoKKv1L8Flbxwdn8MKUa3gangDnXSeaW8rD",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "starbucks.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 89.4,
+      "authorized_date": "2023-09-22",
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "LOW",
+          "entity_id": null,
+          "logo_url": null,
+          "name": "FUN",
+          "phone_number": null,
+          "type": "merchant",
+          "website": null
+        }
+      ],
+      "date": "2023-09-23",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": "FUN",
+      "name": "SparkFun",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "Mv9aeep3xjtVLgnApEx5tzLazoavoDCLXkDeV",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": -4.22,
+      "authorized_date": "2023-09-22",
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Payroll"
+      ],
+      "category_id": "21009000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-22",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "INTRST PYMNT",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "INCOME_WAGES",
+        "primary": "INCOME"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_INCOME.png",
+      "transaction_code": null,
+      "transaction_id": "EGRqxxjyAwcBPw8Djlp5urXqrnqpnVf48zjVW",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-09-12",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "ZXwoKKv1L8Flbxwdn8MKUa3gangDnXSeaW8WV",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 6.33,
+      "authorized_date": "2023-09-09",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-09-10",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 072515 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "1drojjbkx4u5DjwRQGnqix8rxnryn1Cp9VQZe",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants"
+      ],
+      "category_id": "13005000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-07",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Tectra Inc",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+        "primary": "ENTERTAINMENT"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_ENTERTAINMENT.png",
+      "transaction_code": null,
+      "transaction_id": "Mv9aeep3xjtVLgnApEx5tzLazoavoDCLXkDkP",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 2078.5,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Payment"
+      ],
+      "category_id": "16000000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "AUTOMATIC PAYMENT - THANK",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "pNbr881x7PcoxBrKR7Nzc6j56e5ke9fpleDeQ",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Food and Drink",
+        "Restaurants",
+        "Fast Food"
+      ],
+      "category_id": "13005032",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+          "name": "KFC",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "kfc.com"
+        }
+      ],
+      "date": "2023-09-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/kfc_546.png",
+      "merchant_entity_id": "3LmdknrdwVy9vm0dqj417rLKeJXW7veV7eb2e",
+      "merchant_name": "KFC",
+      "name": "KFC",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "FOOD_AND_DRINK_FAST_FOOD",
+        "primary": "FOOD_AND_DRINK"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_FOOD_AND_DRINK.png",
+      "transaction_code": null,
+      "transaction_id": "LvGd77LB34tx1pEkLJv5I1Xd1BdJB9ck6BLBE",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": "kfc.com"
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 500,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Shops",
+        "Sporting Goods"
+      ],
+      "category_id": "19046000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-09-06",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Madison Bicycle Shop",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "1drojjbkx4u5DjwRQGnqix8rxnryn1Cp9VQVo",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "lxgwLLer49uMvkBP96NluvlEnmALkMipgaRKr",
+      "account_owner": null,
+      "amount": 25,
+      "authorized_date": "2023-08-27",
+      "authorized_datetime": null,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-08-28",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+        "primary": "LOAN_PAYMENTS"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_LOAN_PAYMENTS.png",
+      "transaction_code": null,
+      "transaction_id": "Wvw1EEmQZLtZLKWodg35c3R13L1rLDh63xWvL",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": 5.4,
+      "authorized_date": "2023-08-27",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Taxi"
+      ],
+      "category_id": "22016000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+          "name": "Uber",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "uber.com"
+        }
+      ],
+      "date": "2023-08-28",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/uber_1060.png",
+      "merchant_entity_id": "eyg8o776k0QmNgVpAmaQj4WgzW9Qzo6O51gdd",
+      "merchant_name": "Uber",
+      "name": "Uber 063015 SF**POOL**",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRANSPORTATION_TAXIS_AND_RIDE_SHARES",
+        "primary": "TRANSPORTATION"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRANSPORTATION.png",
+      "transaction_code": null,
+      "transaction_id": "LvGd77LB34tx1pEkLJv5I1Xd1BdJB9ck6BLla",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "uber.com"
+    },
+    {
+      "account_id": "rkXBllpaQgt8aAez7kM3CjbaoJ1dwzi79d1rG",
+      "account_owner": null,
+      "amount": 5850,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Debit"
+      ],
+      "category_id": "21006000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-08-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "ACH Electronic CreditGUSTO PAY 123456",
+      "payment_channel": "online",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": "ACH",
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_SERVICES_ACCOUNTING_AND_FINANCIAL_PLANNING",
+        "primary": "GENERAL_SERVICES"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_SERVICES.png",
+      "transaction_code": null,
+      "transaction_id": "vZbazzEjLMiGjRbd75Z4ixRWxXWBXDCqbJo7V",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "qP5zEELdebigd3ZrNBznimeNxpo3l6CgP6Reo",
+      "account_owner": null,
+      "amount": 1000,
+      "authorized_date": null,
+      "authorized_datetime": null,
+      "category": [
+        "Transfer",
+        "Deposit"
+      ],
+      "category_id": "21007000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-08-27",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "CD DEPOSIT .INITIAL.",
+      "payment_channel": "other",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+        "primary": "GENERAL_MERCHANDISE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_GENERAL_MERCHANDISE.png",
+      "transaction_code": null,
+      "transaction_id": "Wvw1EEmQZLtZLKWodg35c3R13L1rLDh63xWXL",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "Kvwxjj1zB4trMAED1XG5S1yMB57qrkURkE1lK",
+      "account_owner": null,
+      "amount": 78.5,
+      "authorized_date": "2023-08-25",
+      "authorized_datetime": null,
+      "category": [
+        "Recreation",
+        "Gyms and Fitness Centers"
+      ],
+      "category_id": "17018000",
+      "check_number": null,
+      "counterparties": [],
+      "date": "2023-08-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": null,
+      "merchant_entity_id": null,
+      "merchant_name": null,
+      "name": "Touchstone Climbing",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "LOW",
+        "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+        "primary": "PERSONAL_CARE"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_PERSONAL_CARE.png",
+      "transaction_code": null,
+      "transaction_id": "o4ZKggM3jJup3AKqbzMru5KN5WNAWJToQAXAQ",
+      "transaction_type": "place",
+      "unofficial_currency_code": null,
+      "website": null
+    },
+    {
+      "account_id": "77vG116MjafKq6mk83WEiW9m18Nq4BIdy8xEM",
+      "account_owner": null,
+      "amount": -500,
+      "authorized_date": "2023-08-26",
+      "authorized_datetime": null,
+      "category": [
+        "Travel",
+        "Airlines and Aviation Services"
+      ],
+      "category_id": "22001000",
+      "check_number": null,
+      "counterparties": [
+        {
+          "confidence_level": "VERY_HIGH",
+          "entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+          "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+          "name": "United Airlines",
+          "phone_number": null,
+          "type": "merchant",
+          "website": "united.com"
+        }
+      ],
+      "date": "2023-08-26",
+      "datetime": null,
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "country": null,
+        "lat": null,
+        "lon": null,
+        "postal_code": null,
+        "region": null,
+        "store_number": null
+      },
+      "logo_url": "https://plaid-merchant-logos.plaid.com/united_airlines_1065.png",
+      "merchant_entity_id": "NKDjqyAdQQzpyeD8qpLnX0D6yvLe2KYKYYzQ4",
+      "merchant_name": "United Airlines",
+      "name": "United Airlines",
+      "payment_channel": "in store",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "personal_finance_category": {
+        "confidence_level": "VERY_HIGH",
+        "detailed": "TRAVEL_FLIGHTS",
+        "primary": "TRAVEL"
+      },
+      "personal_finance_category_icon_url": "https://plaid-category-icons.plaid.com/PFC_TRAVEL.png",
+      "transaction_code": null,
+      "transaction_id": "pNbr881x7PcoxBrKR7Nzc6j56e5ke9fpleDEz",
+      "transaction_type": "special",
+      "unofficial_currency_code": null,
+      "website": "united.com"
+    }
+  ]
+}

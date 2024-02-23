@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
 import org.testcontainers.shaded.okhttp3.OkHttpClient
 import org.testcontainers.shaded.okhttp3.Request
+import java.time.Duration
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -163,6 +164,8 @@ class DivideAndConquer(
                 nextBatch.clear() //remove batch from the original list, regardless if they fail
                 deferreds.awaitAll() //not needed with the runBlocking unless you need the results of each deferred.
             }
+
+
         }
     }
 
@@ -294,7 +297,10 @@ fun printTime(taskName: String, func: ()-> Unit){
 fun makeHttpRequest(){ //this takes about 450 ms
     timeMilli { getMilli ->
         try{
-            OkHttpClient()
+
+            OkHttpClient.Builder()
+                .connectTimeout(Duration.ofMillis(500))
+                .build()
                 .newCall(Request.Builder()
                     .url("https://www.google.com")
                     .build()

@@ -47,6 +47,7 @@ dependencies {
 	implementation("javax.persistence:javax.persistence-api")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation(kotlin("script-runtime"))
+	implementation("com.plaid:plaid-java:20.1.0")
 	// implementation("org.springframework.boot:spring-boot-starter-validation")
 }
 
