@@ -3,12 +3,19 @@ import com.google.gson.Gson
 import com.plaid.client.ApiClient
 import com.plaid.client.model.PlaidError
 import com.plaid.client.model.TransactionsGetRequest
-import com.plaid.client.model.TransactionsGetRequestOptions
 import com.plaid.client.model.TransactionsGetResponse
+
 import com.plaid.client.request.PlaidApi
 import org.junit.jupiter.api.Test
 import okhttp3.*
 import java.time.LocalDate
+import java.time.ZoneId
+import java.util.Date
+
+import com.shadowed.plaid.client.PlaidClient as OldPlaidClient
+import com.shadowed.plaid.client.PlaidApiService as OldPlaidApiService
+import com.shadowed.plaid.client.request.TransactionsGetRequest as OldTransactionsGetRequest
+import com.shadowed.plaid.client.response.TransactionsGetResponse as OldTransactionsGetResponse
 
 val apiKeys = hashMapOf(
     "clientId" to "617975b96aaa7c0011b0a846",
@@ -20,22 +27,39 @@ val baseUrl = "https://sandbox.plaid.com"
 class PlaidClientTests {
     @Test
     fun `should get transactions from disk using an http interceptor`(){
-        println("hi")
-        val plaidClient = createClient()
+        //common
+        val startDate = LocalDate.of(2023, 1, 1)
+        val endDate =  LocalDate.of(2024, 3,1)
+
+        //new client
+        val plaidService = createPlaidService()
         val request = TransactionsGetRequest()
-        request.startDate = LocalDate.of(2023, 1, 1)
-        request.endDate = LocalDate.of(2024, 3,1)
+        request.startDate = startDate
+        request.endDate = endDate
         request.accessToken = accessToken
         val transactionsResponse = callPlaid<TransactionsGetResponse> {
-            plaidClient.transactionsGet(request).execute()
+            plaidService.transactionsGet(request).execute()
         }
         val transactions = transactionsResponse?.transactions
 
         assert(transactions?.size == 100)
-        val transaction1 = transactions?.get(0)!!
-        assert(transaction1.transactionId == "el49jjdkrPcNW7kBoeKjtmPk3d9jBmhr9e54V")
+//        val transaction1 = transactions?.get(0)!!
+//        assert(transaction1.transactionId == "el49jjdkrPcNW7kBoeKjtmPk3d9jBmhr9e54V")
         println(transactionsResponse)
+
+        //old client
+        val oldPlaidApiService = createOldPlaidService()
+        val oldRequest = OldTransactionsGetRequest(accessToken, localDateToDate(startDate), localDateToDate(endDate))
+        val oldTransactionsResponse = callPlaid<OldTransactionsGetResponse>{
+            oldPlaidApiService?.transactionsGet(oldRequest)?.execute()!!
+        }
+        val oldTransactions = oldTransactionsResponse?.transactions
+        assert(oldTransactions?.size == 100)
+        println(oldTransactionsResponse)
     }
+}
+fun localDateToDate(localDate: LocalDate, zoneId: ZoneId = ZoneId.systemDefault()): Date {
+    return Date.from(localDate.atStartOfDay(zoneId).toInstant())
 }
 
 fun <TResponse>callPlaid(func: () -> retrofit2.Response<TResponse> ): TResponse?{
@@ -63,14 +87,22 @@ fun decodePlaidError(response: retrofit2.Response<*>): PlaidError{
     }
 }
 
-fun createClient(): PlaidApi {
+fun createPlaidService(): PlaidApi {
     //use a transactions interceptor to read transactions from disk
     val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(TransactionsInterceptor("src/test/resources/testdata/transactions.json"))
         .build()
-//    val apiClient = ApiClient(apiKeys)
-    val apiClient = ApiClient(okHttpClient)
+    val apiClient = ApiClient(apiKeys)
+//    val apiClient = ApiClient(okHttpClient)
     apiClient.setPlaidAdapter(baseUrl)
     val plaidClient = apiClient.createService(PlaidApi::class.java)
     return plaidClient
+}
+
+fun createOldPlaidService(): OldPlaidApiService? {
+    val oldClient = OldPlaidClient.newBuilder()
+        .clientIdAndSecret(apiKeys.get("clientId"), apiKeys.get("secret"))
+    oldClient.baseUrl(baseUrl)
+    val service = oldClient.build().service()
+    return service
 }
