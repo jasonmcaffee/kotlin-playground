@@ -52,18 +52,15 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	implementation("org.postgresql:postgresql")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-//	testImplementation("com.h2database:h2")
 	testImplementation("io.zonky.test:embedded-database-spring-test:2.1.2")
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.flywaydb:flyway-core") //run migrations on startup
 	implementation("javax.persistence:javax.persistence-api")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation(kotlin("script-runtime"))
-//	shadowImplementation("com.plaid:plaid-java:20.1.0")
 	shadow("com.plaid:plaid-java:8.2.0")
 	implementation("com.plaid:plaid-java:20.1.0")
 	implementation(files("$buildDir/libs/plaid-shadow-0.0.1-SNAPSHOT-all.jar"))
-	// implementation("org.springframework.boot:spring-boot-starter-validation")
 }
 tasks.shadowJar{
 	relocate("com.plaid.client", "com.shadowed.plaid.client")
@@ -91,9 +88,7 @@ tasks.withType<Test> {
 tasks.build {
 	dependsOn(tasks.shadowJar)
 }
-//tasks.test {
-//	dependsOn(tasks.shadowJar)
-//}
+
 //db migration
 //flyway {
 //	url = ""
