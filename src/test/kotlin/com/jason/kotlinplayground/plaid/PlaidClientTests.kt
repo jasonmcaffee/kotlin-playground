@@ -8,6 +8,7 @@ import com.plaid.client.model.TransactionsGetResponse
 import com.plaid.client.request.PlaidApi
 import org.junit.jupiter.api.Test
 import okhttp3.*
+import java.io.File
 import java.time.LocalDate
 import java.time.ZoneId
 import java.util.Date
@@ -43,9 +44,12 @@ class PlaidClientTests {
         val transactions = transactionsResponse?.transactions
 
         assert(transactions?.size == 100)
-//        val transaction1 = transactions?.get(0)!!
+        val transaction1 = transactions?.get(0)!!
+        println(transaction1.personalFinanceCategory?.primary)
+        println(transaction1.personalFinanceCategory?.detailed)
+        println(transaction1.category) //deprecated
 //        assert(transaction1.transactionId == "el49jjdkrPcNW7kBoeKjtmPk3d9jBmhr9e54V")
-        println(transactionsResponse)
+//        println(transactionsResponse)
 
         //old client
         val oldPlaidApiService = createOldPlaidService()
@@ -55,7 +59,10 @@ class PlaidClientTests {
         }
         val oldTransactions = oldTransactionsResponse?.transactions
         assert(oldTransactions?.size == 100)
-        println(oldTransactionsResponse)
+        val oldTransaction1 = oldTransactions?.get(0)!! as TransactionWithPFC
+        println(oldTransaction1.category)
+        println(oldTransaction1.personalFinanceCategory?.primary)
+//        println(oldTransactionsResponse)
     }
 }
 fun localDateToDate(localDate: LocalDate, zoneId: ZoneId = ZoneId.systemDefault()): Date {
@@ -100,9 +107,18 @@ fun createPlaidService(): PlaidApi {
 }
 
 fun createOldPlaidService(): OldPlaidApiService? {
+    val file = File("src/test/resources/testdata/temp.json")
+
     val oldClient = OldPlaidClient.newBuilder()
         .clientIdAndSecret(apiKeys.get("clientId"), apiKeys.get("secret"))
-    oldClient.baseUrl(baseUrl)
+        .baseUrl(baseUrl)
+
+    oldClient.okHttpClientBuilder().addInterceptor(JsonResponseInterceptor(file)).build()
+
+    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer()).create()
+
     val service = oldClient.build().service()
     return service
 }
+
+//    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse::class.java, TransactionsGetResponseDeserializer()).create()
