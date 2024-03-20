@@ -58,6 +58,8 @@ class PlaidClientTests {
         val oldTransactionsResponse = callPlaid<OldTransactionsGetResponse>{
             oldPlaidApiService?.transactionsGet(oldRequest)?.execute()!!
         }
+        val oldTransaction0 = oldTransactionsResponse?.transactions?.get(0)
+        assert(oldTransaction0?.accountId != null)
         val oldTransactions = oldTransactionsResponse?.transactions
         val oldTransactionsWithPFC = oldTransactions?.mapNotNull { it as TransactionWithPFC }
         assert(oldTransactions?.size == 100)
@@ -69,15 +71,22 @@ class PlaidClientTests {
         println(oldTransaction1.personalFinanceCategory?.confidenceLevel)
 
         val gson = createGsonWithTransactionsWithPersonalFinanceCategorySerializer()
-        val oldTransactionsJson = gson.toJson(oldTransactionsResponse)
+//        val oldTransactionsJson = gson.toJson(oldTransactionsResponse)
+        val oldTransactionsJson = Gson().toJson(oldTransactionsResponse)
         assert(oldTransactionsJson.indexOf("personal_finance_category") > 0)
+        assert(oldTransactionsJson.indexOf("item") > 0)
+        assert(oldTransactionsJson.indexOf("accounts") > 0)
+        assert(oldTransactionsJson.indexOf("requestId") > 0)
+        assert(oldTransactionsJson.indexOf("totalTransactions") > 0)
+
 //        println(oldTransactionsResponse)
     }
 }
 
 fun createGsonWithTransactionsWithPersonalFinanceCategorySerializer(): Gson {
     val gsonBuilder = GsonBuilder()
-    gsonBuilder.registerTypeAdapter(OldTransactionsGetResponse::class.java, TransactionsGetResponseSerializer())
+//    gsonBuilder.registerTypeAdapter(OldTransactionsGetResponse::class.java, TransactionsGetResponseSerializer())
+//    gsonBuilder.registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionSerializer())
     val gson = gsonBuilder.create()
     return gson
 }
@@ -130,9 +139,7 @@ fun createOldPlaidService(): OldPlaidApiService? {
         .clientIdAndSecret(apiKeys.get("clientId"), apiKeys.get("secret"))
         .baseUrl(baseUrl)
 
-    oldClient.okHttpClientBuilder().addInterceptor(JsonResponseInterceptor(file)).build()
-
-//    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer()).create()
+//    oldClient.okHttpClientBuilder().addInterceptor(JsonResponseInterceptor(file)).build()
     oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer())
 
     val service = oldClient.build().service()

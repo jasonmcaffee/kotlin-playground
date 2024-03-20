@@ -6,8 +6,9 @@ import java.lang.reflect.Type
 class TransactionDeserializer : JsonDeserializer<OldTransaction> {
     override fun deserialize(json: JsonElement, typeOfT: Type, context: JsonDeserializationContext): TransactionWithPFC {
         val jsonObject = json.asJsonObject
-        val response = Gson().fromJson(jsonObject, TransactionWithPFC::class.java)
-        return response
+//        val response = Gson().fromJson(jsonObject, TransactionWithPFC::class.java)  // <-- bad
+        val response2 = context.deserialize<TransactionWithPFC>(jsonObject, TransactionWithPFC::class.java)
+        return response2
     }
 }
 
