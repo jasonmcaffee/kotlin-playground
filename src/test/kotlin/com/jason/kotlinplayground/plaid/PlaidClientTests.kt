@@ -62,6 +62,9 @@ class PlaidClientTests {
         val oldTransaction1 = oldTransactions?.get(0)!! as TransactionWithPFC
         println(oldTransaction1.category)
         println(oldTransaction1.personalFinanceCategory?.primary)
+        println(oldTransaction1.personalFinanceCategory?.detailed)
+        println(oldTransaction1.personalFinanceCategory?.confidenceLevel)
+
 //        println(oldTransactionsResponse)
     }
 }
@@ -115,7 +118,8 @@ fun createOldPlaidService(): OldPlaidApiService? {
 
     oldClient.okHttpClientBuilder().addInterceptor(JsonResponseInterceptor(file)).build()
 
-    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer()).create()
+//    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer()).create()
+    oldClient.gsonBuilder().registerTypeAdapter(OldTransactionsGetResponse.Transaction::class.java, TransactionDeserializer())
 
     val service = oldClient.build().service()
     return service

@@ -6,8 +6,11 @@ class TransactionWithPFC(): OldTransaction() {
     var personalFinanceCategory: PersonalFinanceCategory? = null
 
     class PersonalFinanceCategory {
+        @SerializedName("confidence_level")
         var confidenceLevel: String? = null
+        @SerializedName("detailed")
         var detailed: String? = null
+        @SerializedName("primary")
         var primary: String? = null
     }
 }
