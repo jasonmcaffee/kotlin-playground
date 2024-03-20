@@ -20,4 +20,5 @@ class TransactionsGetResponseDeserializer : JsonDeserializer<OldTransactionsGetR
 
         return response
     }
+
 }

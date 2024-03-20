@@ -1,5 +1,6 @@
 package com.jason.kotlinplayground.plaid
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.plaid.client.ApiClient
 import com.plaid.client.model.PlaidError
 import com.plaid.client.model.TransactionsGetRequest
@@ -58,16 +59,29 @@ class PlaidClientTests {
             oldPlaidApiService?.transactionsGet(oldRequest)?.execute()!!
         }
         val oldTransactions = oldTransactionsResponse?.transactions
+        val oldTransactionsWithPFC = oldTransactions?.mapNotNull { it as TransactionWithPFC }
         assert(oldTransactions?.size == 100)
-        val oldTransaction1 = oldTransactions?.get(0)!! as TransactionWithPFC
+//        val oldTransaction1 = oldTransactions?.get(0)!! as TransactionWithPFC
+        val oldTransaction1 = oldTransactionsWithPFC?.get(0)!!
         println(oldTransaction1.category)
         println(oldTransaction1.personalFinanceCategory?.primary)
         println(oldTransaction1.personalFinanceCategory?.detailed)
         println(oldTransaction1.personalFinanceCategory?.confidenceLevel)
 
+        val gson = createGsonWithTransactionsWithPersonalFinanceCategorySerializer()
+        val oldTransactionsJson = gson.toJson(oldTransactionsResponse)
+        assert(oldTransactionsJson.indexOf("personal_finance_category") > 0)
 //        println(oldTransactionsResponse)
     }
 }
+
+fun createGsonWithTransactionsWithPersonalFinanceCategorySerializer(): Gson {
+    val gsonBuilder = GsonBuilder()
+    gsonBuilder.registerTypeAdapter(OldTransactionsGetResponse::class.java, TransactionsGetResponseSerializer())
+    val gson = gsonBuilder.create()
+    return gson
+}
+
 fun localDateToDate(localDate: LocalDate, zoneId: ZoneId = ZoneId.systemDefault()): Date {
     return Date.from(localDate.atStartOfDay(zoneId).toInstant())
 }
