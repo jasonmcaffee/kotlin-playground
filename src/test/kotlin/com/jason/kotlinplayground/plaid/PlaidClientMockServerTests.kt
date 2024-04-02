@@ -32,17 +32,12 @@ class PlaidClientMockServerTests {
             "clientId" to "617975b96aaa7c0011b0a846",
             "secret" to "9cd3e5bd00e10c3a723f85c90d2f95",
         )
-        val accessToken = "access-sandbox-84aa81b0-9c66-44f3-9443-338d54b49538"
 
         plaidMockServer = PlaidMockServer()
         val url = plaidMockServer.getUrl()
         println("Plaid mock server running on url $url")
 
-        //use a transactions interceptor to read transactions from disk
-//        val okHttpClient = OkHttpClient.Builder()
-//            .build()
         val apiClient = ApiClient(apiKeys)
-//    val apiClient = ApiClient(okHttpClient)
         apiClient.setPlaidAdapter(url)
         val plaidClient = apiClient.createService(PlaidApi::class.java)
         return plaidClient
