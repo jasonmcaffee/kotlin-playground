@@ -26,7 +26,7 @@ val apiKeys = hashMapOf(
 val accessToken = "access-sandbox-84aa81b0-9c66-44f3-9443-338d54b49538"
 val baseUrl = "https://sandbox.plaid.com"
 
-class PlaidClientTests {
+class PlaidClientSerializationTests {
     @Test
     fun `should get transactions from disk using an http interceptor`(){
         //common
