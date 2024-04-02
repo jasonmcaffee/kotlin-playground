@@ -34,7 +34,7 @@ class PlaidClientSerializationTests {
         val endDate =  LocalDate.of(2024, 3,1)
 
         //new client
-        val plaidService = createPlaidService()
+        val plaidService = createPlaidServiceThatUsesPlaidMockServer()
         val request = TransactionsGetRequest()
         request.startDate = startDate
         request.endDate = endDate
@@ -120,7 +120,7 @@ fun decodePlaidError(response: retrofit2.Response<*>): PlaidError{
     }
 }
 
-fun createPlaidService(): PlaidApi {
+fun createPlaidServiceThatUsesPlaidMockServer(): PlaidApi {
     //use a transactions interceptor to read transactions from disk
     val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(TransactionsInterceptor("src/test/resources/testdata/transactions.json"))

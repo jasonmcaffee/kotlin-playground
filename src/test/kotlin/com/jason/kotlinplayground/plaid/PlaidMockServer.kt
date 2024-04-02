@@ -5,6 +5,9 @@ import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 import java.io.File
+import java.security.KeyStore
+import javax.net.ssl.KeyManagerFactory
+import javax.net.ssl.SSLContext
 
 /**
  * Server that handles plaid requests
@@ -13,6 +16,20 @@ class PlaidMockServer() {
     val mockWebServer = MockWebServer()
 
     init {
+        val sslContext = SSLContext.getInstance("TLS")
+        val keyManagerFactory = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm())
+
+        // Load the keystore
+        val keyStore = KeyStore.getInstance("PKCS12")
+        val keystoreInputStream = File("src/test/resources/mock_server_keys/mockserver.p12").inputStream() // Adjust the path
+        keyStore.load(keystoreInputStream, "123456".toCharArray()) // Use your keystore password
+
+        keyManagerFactory.init(keyStore, "123456".toCharArray()) // Use your key password
+        sslContext.init(keyManagerFactory.keyManagers, null, null)
+
+        // Set the SSL context to the MockWebServer
+        mockWebServer.useHttps(sslContext.socketFactory, false)
+
         mockWebServer.dispatcher = object: Dispatcher(){
             override fun dispatch(request: RecordedRequest): MockResponse {
                 return handleRequest(request)
